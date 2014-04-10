@@ -18,7 +18,7 @@
                     {
                         if(!$one_first) $one_first = $value['clinical_problem'][0];
                         $one_last = $value['clinical_problem'][0];
-                        echo '<li class="selectable"><a href="#" data-router="article" data-async="start/adult_prob/'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
+                        echo '<li class="selectable"><a href="#'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'" data-router="section" data-async="start/adult_prob/'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
 
 
