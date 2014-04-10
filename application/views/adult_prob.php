@@ -13,10 +13,10 @@
             <ul>
                 <?php
                     $chunked = array_chunk($adult_probs,(round(count($adult_probs)/3)));
-                    $one_first = TRUE;
+                    $one_first = FALSE;
                     foreach($chunked[0] as $value)
                     {
-                        if($one_first) $one_first = $value['clinical_problem'][0];
+                        if(!$one_first) $one_first = $value['clinical_problem'][0];
                         $one_last = $value['clinical_problem'][0];
                         echo '<li class="selectable"><a href="#" data-view-article="'.$value['clinical_problem'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
@@ -30,10 +30,10 @@
         <article id="adult_prob_2" class="list indenteds scroll">
             <ul>
                 <?php
-                    $two_first = TRUE;
+                    $two_first = FALSE;
                     foreach($chunked[1] as $value)
                     {
-                        if($one_first) $two_first = $value['clinical_problem'][0];
+                        if(!$two_first) $two_first = $value['clinical_problem'][0];
                         $two_last = $value['clinical_problem'][0];
                         echo '<li class="selectable"><a href="#" data-view-article="'.$value['clinical_problem'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
@@ -44,10 +44,10 @@
         <article id="adult_prob_3" class="list indenteds scroll">
             <ul>
                 <?php
-                    $three_first = TRUE;
+                    $three_first = FALSE;
                     foreach($chunked[2] as $value)
                     {
-                        if($one_first) $three_first = $value['clinical_problem'][0];
+                        if(!$three_first) $three_first = $value['clinical_problem'][0];
                         $three_last = $value['clinical_problem'][0];
                         echo '<li class="selectable"><a href="#" data-view-article="'.$value['clinical_problem'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
