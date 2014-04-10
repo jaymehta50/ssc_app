@@ -18,7 +18,7 @@
                     {
                         if(!$one_first) $one_first = $value['clinical_problem'][0];
                         $one_last = $value['clinical_problem'][0];
-                        echo '<li class="selectable"><a href="#'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'" data-router="article" data-async="http://jkm50.user.srcf.net/ssc_app/start/adult_prob/'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'" ><strong>'.$value['clinical_problem'].'</strong></a></li>';
+                        echo '<li class="selectable"><a href="#" data-router="article" data-async="start/adult_prob/'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
 
 
@@ -35,7 +35,7 @@
                     {
                         if(!$two_first) $two_first = $value['clinical_problem'][0];
                         $two_last = $value['clinical_problem'][0];
-                        echo '<li class="selectable"><a href="#" data-router="article" data-async="http://jkm50.user.srcf.net/ssc_app/start/adult_prob/'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
+                        echo '<li class="selectable"><a href="#" data-router="article" data-async="start/adult_prob/'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
                 ?>
             </ul>
@@ -49,7 +49,7 @@
                     {
                         if(!$three_first) $three_first = $value['clinical_problem'][0];
                         $three_last = $value['clinical_problem'][0];
-                        echo '<li class="selectable"><a href="#" data-router="article" data-async="http://jkm50.user.srcf.net/ssc_app/start/adult_prob/'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
+                        echo '<li class="selectable"><a href="#" data-router="article" data-async="start/adult_prob/'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
                 ?>
             </ul>
