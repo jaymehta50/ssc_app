@@ -15,7 +15,7 @@
                     $chunked = array_chunk($adult_probs,(round(count($adult_probs)/3)));
                     foreach($chunked[0] as $value)
                     {
-                        echo '<li class="selectable"><a href="#" data-view-article="'.$value.'"><strong>'.$value.'</strong></a></li>';
+                        echo '<li class="selectable"><a href="#" data-view-article="'.$value['clinical_problem'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
 
 
@@ -29,7 +29,7 @@
                 <?php
                     foreach($chunked[1] as $value)
                     {
-                        echo '<li class="selectable"><a href="#" data-view-article="'.$value.'"><strong>'.$value.'</strong></a></li>';
+                        echo '<li class="selectable"><a href="#" data-view-article="'.$value['clinical_problem'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
                 ?>
             </ul>
@@ -40,7 +40,7 @@
                 <?php
                     foreach($chunked[2] as $value)
                     {
-                        echo '<li class="selectable"><a href="#" data-view-article="'.$value.'"><strong>'.$value.'</strong></a></li>';
+                        echo '<li class="selectable"><a href="#" data-view-article="'.$value['clinical_problem'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
                 ?>
             </ul>
