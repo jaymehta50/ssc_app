@@ -22,7 +22,7 @@ class Start extends CI_Controller {
 
 	public function adult_prob($problem)
 	{
-		$data['one_adult_prob'] = $this->problems_model->getoneadultprob();
+		$data['one_adult_prob'] = $this->problems_model->getoneadultprob($problem);
 		$this->load->view('one_adult_prob',$data);
 	}
 }
