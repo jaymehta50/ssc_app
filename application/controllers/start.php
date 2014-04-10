@@ -19,6 +19,12 @@ class Start extends CI_Controller {
 		$this->load->view('adult_prob',$data);
 		$this->load->view('footer',$data);
 	}
+
+	public function adult_prob($problem)
+	{
+		$data['one_adult_prob'] = $this->problems_model->getoneadultprob();
+		$this->load->view('one_adult_prob',$data);
+	}
 }
 
 /* End of file welcome.php */

@@ -16,5 +16,13 @@ class Problems_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function getoneadultprob($problem)
+	{
+		$this->db->order_by('problem_subgroup','asc');
+		$this->db->where("lower(clinical_problem) = '".str_replace("_", " ", $problem)."'");
+		$query = $this->db->get('problem_list_adult');
+		return $query->result_array();
+	}
+
 
 }
