@@ -15,7 +15,7 @@ class Start extends CI_Controller {
 		$data['adult_probs'] = $this->problems_model->getadultprob();
 		$this->load->view('header',$data);
 		$this->load->view('intro',$data);
-		$this->load->view('menu',$data);
+		//$this->load->view('menu',$data);
 		$this->load->view('adult_prob',$data);
 		$this->load->view('footer',$data);
 	}
