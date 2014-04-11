@@ -1,7 +1,7 @@
 <section id="adult_prob_<?php echo $one_adult_prob[0]['clinical_problem_id']; ?>" data-transition="slide" data-aside="features" class="drag">
         <header>
             <nav>
-                <a href="#" data-view-aside="features" data-icon="menu"></a>
+                <a href="#" data-view-section="back" data-icon="left" data-label="Return to previous section"></a>
             </nav>
             <?php echo $problem_name['clinical_problem']; ?>
             <nav class="on-right">
@@ -12,9 +12,12 @@
         <article id="one_adult_prob" class="list indenteds scroll active">
             <ul>
                 <?php
+                    $prev = "";
                     foreach($one_adult_prob as $value)
                     {
+                        if($prev==$value['problem_subgroup']) continue;
                         echo '<li class="selectable"><a href="#"><strong>'.$value['problem_subgroup'].'</strong></a></li>';
+                        $prev = $value['problem_subgroup'];
                     }
                 ?>
             </ul>
