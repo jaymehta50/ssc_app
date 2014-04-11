@@ -11,7 +11,6 @@
 
         <article id="adult_prob_1" class="list indenteds scroll active">
             <ul>
-                <li class="selectable"><a href="#" data-view-section="abdominal_distension" data-async="assets/abdo_distension.html"><strong>Abdominal distension</strong></a></li>
                 <?php
                     $chunked = array_chunk($adult_probs,(round(count($adult_probs)/3)));
                     $one_first = FALSE;
@@ -21,9 +20,6 @@
                         $one_last = $value['clinical_problem'][0];
                         echo '<li class="selectable"><a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
-
-
-
                 ?>
             </ul>
         </article>

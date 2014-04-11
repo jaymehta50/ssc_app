@@ -1,7 +1,7 @@
 <section id="adult_prob_<?php echo $one_adult_prob[0]['clinical_problem_id']; ?>" data-transition="slide" data-aside="features" class="drag">
-        <header>
+        <header data-back="adult_prob">
             <nav>
-                <a href="#" data-view-section="back" data-icon="left" data-label="Return to previous section"></a>
+                <a href="#" data-view-section="back" data-icon="chevron-left"></a>
             </nav>
             <?php echo $problem_name['clinical_problem']; ?>
             <nav class="on-right">
