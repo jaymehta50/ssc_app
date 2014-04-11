@@ -10,14 +10,34 @@
             <ul>
                 <?php
                     $prev = "";
+                    $subgroup_array = array();
+                    $i = 0;
                     foreach($one_adult_prob as $value)
                     {
                         if($prev==$value['problem_subgroup']) continue;
-                        echo '<li class="selectable"><a href="#"><strong>'.$value['problem_subgroup'].'</strong></a></li>';
+                        $i += 1;
+                        $subgroup_array[] = $value['problem_subgroup'];
+                        echo '<li class="selectable"><a href="#" data-view-article="subprob_'.$i.'"><strong>'.$value['problem_subgroup'].'</strong></a></li>';
                         $prev = $value['problem_subgroup'];
                     }
                 ?>
             </ul>
         </article>
 
+        <?php
+        $i = 0;
+        foreach($subgroup_array as $value) {
+            echo '<article id="subprob_'.$i.'" class="list indenteds scroll"><ul>';
+            foreach($one_adult_prob as $value2)
+            {
+                if($value!=$value2['problem_subgroup']) continue;
+                echo '<li class="selectable"><a href="#" data-view-article="subprob_'.$i.'"><strong>'.$value['condition'].'</strong></a></li>';
+            }   
+            echo '</ul></article>';
+        }
+
+        ?>
+
     </section>
+
+
