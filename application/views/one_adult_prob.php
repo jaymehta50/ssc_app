@@ -1,9 +1,9 @@
-<section id="adult_prob" data-transition="slide" data-aside="features" class="drag">
+<section id="adult_prob_<?php echo $one_adult_prob[0]['clinical_problem_id']; ?>" data-transition="slide" data-aside="features" class="drag">
         <header>
             <nav>
                 <a href="#" data-view-aside="features" data-icon="menu"></a>
             </nav>
-            <?php echo $one_adult_prob[0]['clinical_problem']; ?>
+            <?php echo $problem_name['clinical_problem']; ?>
             <nav class="on-right">
                 <a href="#"  ><abbr class="text tiny ">v0.1</abbr></a>
             </nav>

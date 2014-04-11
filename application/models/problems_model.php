@@ -32,5 +32,12 @@ class Problems_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function getprobnameadult($problem)
+	{
+		$this->db->where('problem_id_adult', $problem);
+		$query = $this->db->get('problem_names_adult');
+		return $query->row_array();
+	}
+
 
 }

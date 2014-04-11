@@ -22,8 +22,8 @@ class Start extends CI_Controller {
 
 	public function adult_prob($problem)
 	{
-		$temp = explode(".", $problem);
-		$data['one_adult_prob'] = $this->problems_model->getoneadultprob($temp[0]);
+		$data['one_adult_prob'] = $this->problems_model->getoneadultprob($problem);
+		$data['problem_name'] = $this->problems_model->getprobnameadult($problem);
 		$this->load->view('one_adult_prob',$data);
 	}
 }
