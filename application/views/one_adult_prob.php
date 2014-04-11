@@ -6,8 +6,12 @@
             </nav>
         </header>
 
-        <article id="one_adult_prob" class="list indenteds scroll active">
-            <ul>
+        <article id="one_adult_prob" class="list scroll active">
+            <ul class="intended">
+                <li><p>These are the subgroups of problems associated with <span style="font-style:italic;"><?php echo $problem_name['clinical_problem']; ?></span></p>
+                <p>Click on one to see the condition(s) associated with it!</p>
+            </ul>
+            <ul class='indenteds'>
                 <?php
                     $prev = "";
                     $subgroup_array = array();
@@ -28,7 +32,10 @@
         $i = 0;
         foreach($subgroup_array as $value) {
             $i += 1;
-            echo '<article id="subprob_'.$i.'" class="list indenteds scroll"><ul>';
+            echo '<article id="subprob_'.$i.'" class="list indenteds scroll"><ul class="intended">
+                <li><p>These are the conditions associated with <span style="font-style:italic;">'.$problem_name['clinical_problem'].' - '.$value.'</span></p>
+                <p>Click on a condition to see when in the course it appears and to make notes on it!</p>
+            </ul><ul class="intendeds">';
             foreach($one_adult_prob as $value2)
             {
                 if($value!=$value2['problem_subgroup']) continue;
