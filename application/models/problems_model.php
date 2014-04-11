@@ -16,6 +16,12 @@ class Problems_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function getadultprobnames()
+	{
+		$query = $this->db->get('problem_names_adult');
+		return $query->result_array();
+	}
+
 	public function getoneadultprob($problem)
 	{
 		$this->db->order_by('problem_subgroup','asc');

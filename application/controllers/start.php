@@ -12,7 +12,7 @@ class Start extends CI_Controller {
 	public function index()
 	{
 		$data['base_url'] = base_url();
-		$data['adult_probs'] = $this->problems_model->getadultprob();
+		$data['adult_probs'] = $this->problems_model->getadultprobnames();
 		$this->load->view('header',$data);
 		$this->load->view('intro',$data);
 		//$this->load->view('menu',$data);
