@@ -27,11 +27,12 @@
         <?php
         $i = 0;
         foreach($subgroup_array as $value) {
+            $i += 1;
             echo '<article id="subprob_'.$i.'" class="list indenteds scroll"><ul>';
             foreach($one_adult_prob as $value2)
             {
                 if($value!=$value2['problem_subgroup']) continue;
-                echo '<li class="selectable"><a href="#" data-view-article="subprob_'.$i.'"><strong>'.$value['condition'].'</strong></a></li>';
+                echo '<li class="selectable"><a href="#" data-view-article=""><strong>'.$value2['condition'].'</strong></a></li>';
             }   
             echo '</ul></article>';
         }
