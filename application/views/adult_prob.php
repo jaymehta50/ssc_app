@@ -18,7 +18,7 @@
                     {
                         if(!$one_first) $one_first = $value['clinical_problem'][0];
                         $one_last = $value['clinical_problem'][0];
-                        echo '<li class="selectable"><a href="#'.strtolower(str_replace(" ","_",$value['clinical_problem'])).'" data-router="section" data-async="assets/abdo_distension.html"><strong>'.$value['clinical_problem'].'</strong></a></li>';
+                        echo '<li class="selectable"><a href="#main" data-router="section" data-async="assets/abdo_distension.html"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
 
 
