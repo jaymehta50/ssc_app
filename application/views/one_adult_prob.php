@@ -1,7 +1,7 @@
 <section id="adult_prob_<?php echo $one_adult_prob[0]['clinical_problem_id']; ?>" data-transition="slide" data-aside="features" class="drag">
         <header>
             <nav>
-                <a href="#back" data-view-section="back"><span class="icon arrow-left"></span></a>
+                <a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a>
             </nav>
             <?php echo $problem_name['clinical_problem']; ?>
             <nav class="on-right">
@@ -24,7 +24,7 @@
                         if($prev==$value['problem_subgroup']) continue;
                         $i += 1;
                         $subgroup_array[] = array('problem_id' => $value['clinical_problem_id'], 'subprob' => $value['problem_subgroup'], 'subprob_no' => $i);
-                        echo '<li class="selectable"><a href="#" data-view-section="adultprob_'.$value['clinical_problem_id'].'_subprob_'.$i.'"><strong>'.$value['problem_subgroup'].'</strong></a></li>';
+                        echo '<li class="selectable arrow"><a href="#" data-view-section="adultprob_'.$value['clinical_problem_id'].'_subprob_'.$i.'"><strong>'.$value['problem_subgroup'].'</strong></a></li>';
                         $prev = $value['problem_subgroup'];
                     }
                 ?>
@@ -35,7 +35,7 @@
         <?php
         foreach($subgroup_array as $value) {
             echo '<section id="adultprob_'.$value['problem_id'].'_subprob_'.$value['subprob_no'].'" data-transition="slide" data-aside="features" class="drag">
-        <header><nav><a href="#back" data-view-section="back"><span class="icon arrow-left"></span></a></nav>'.$problem_name['clinical_problem'].': '.$value['subprob'].'
+        <header><nav><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></nav>'.$problem_name['clinical_problem'].': '.$value['subprob'].'
             <nav class="on-right">
                 <a href="#"><abbr class="text tiny ">v0.1</abbr></a>
             </nav>
@@ -46,7 +46,7 @@
             foreach($one_adult_prob as $value2)
             {
                 if($value['subprob']!=$value2['problem_subgroup']) continue;
-                echo '<li class="selectable"><a href="#" data-view-article=""><strong>'.$value2['condition'].'</strong></a></li>';
+                echo '<li class="selectable arrow"><a href="#" data-view-article=""><strong>'.$value2['condition'].'</strong></a></li>';
             }   
             echo '</ul></article></section>';
         }
