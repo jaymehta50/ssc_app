@@ -9,8 +9,11 @@
             </nav>
         </header>
 
-        <article id="adult_prob_1" class="list indented scroll active">
-            <ul>
+        <article id="adult_prob_1" class="list scroll active">
+            <ul class="indented">
+                <li>This is the Problem List!</li>
+            </ul>
+            <ul class="indenteds">
                 <?php
                     $chunked = array_chunk($adult_probs,(round(count($adult_probs)/3)));
                     $one_first = FALSE;
