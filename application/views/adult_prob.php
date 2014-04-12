@@ -10,10 +10,10 @@
         </header>
 
         <article id="adult_prob_1" class="list scroll active">
-            <ul class="indented">
+            <div class="indented"><ul>
                 <li>This is the Problem List!</li>
-            </ul>
-            <ul class="indenteds">
+            </ul></div>
+            <div class="indenteds"><ul>
                 <?php
                     $chunked = array_chunk($adult_probs,(round(count($adult_probs)/3)));
                     $one_first = FALSE;
@@ -24,7 +24,7 @@
                         echo '<li class="selectable arrow"><a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
                     }
                 ?>
-            </ul>
+            </ul></div>
         </article>
 
         <article id="adult_prob_2" class="list indented scroll">
