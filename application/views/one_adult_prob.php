@@ -4,9 +4,6 @@
                 <a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a>
             </nav>
             <?php echo $problem_name['clinical_problem']; ?>
-            <nav class="on-right">
-                <a href="#"><abbr class="text tiny ">v0.1</abbr></a>
-            </nav>
         </header>
 
         <article id="one_adult_prob" class="list scroll active">
@@ -35,12 +32,9 @@
         <?php
         foreach($subgroup_array as $value) {
             echo '<section id="adultprob_'.$value['problem_id'].'_subprob_'.$value['subprob_no'].'" data-transition="slide" data-aside="features" class="drag">
-        <header><nav><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></nav>'.$problem_name['clinical_problem'].': '.$value['subprob'].'
-            <nav class="on-right">
-                <a href="#"><abbr class="text tiny ">v0.1</abbr></a>
-            </nav>
-        </header><article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
-                <li><p>These are the conditions associated with <span style="font-style:italic;">'.$problem_name['clinical_problem'].' - '.$value['subprob'].'</span></p>
+        <header><nav><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></nav>'.$problem_name['clinical_problem'].': '.$value['subprob'].'</header>
+        <article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
+                <li><p>These are the conditions associated with <span style="font-style:italic;">'.$problem_name['clinical_problem'].': '.$value['subprob'].'</span></p>
                 <p>Click on a condition to see when in the course it appears and to make notes on it!</p></li>
             </ul></div><div class="intendeds"><ul>';
             foreach($one_adult_prob as $value2)

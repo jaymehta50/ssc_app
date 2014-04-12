@@ -4,9 +4,6 @@
                 <a href="#" data-view-aside="features" data-icon="menu"></a>
             </nav>
             Adult Problem List
-            <nav class="on-right">
-                <a href="#"  ><abbr class="text tiny ">v0.1</abbr></a>
-            </nav>
         </header>
 
         <article id="adult_prob_1" class="list scroll active">
