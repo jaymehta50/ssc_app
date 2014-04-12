@@ -1,6 +1,6 @@
 <section id="adult_prob_<?php echo $one_adult_prob[0]['clinical_problem_id']; ?>" data-transition="slide" data-aside="features" class="drag">
         <header>
-            <button data-view-section="back" data-icon="chevron-left"></button>
+            <a href="#back" data-view-section="back" data-icon="chevron-left"></a>
             <?php echo $problem_name['clinical_problem']; ?>
             <nav class="on-right">
                 <a href="#"><abbr class="text tiny ">v0.1</abbr></a>
@@ -33,7 +33,7 @@
         <?php
         foreach($subgroup_array as $value) {
             echo '<section id="adultprob_'.$value['problem_id'].'_subprob_'.$value['subprob_no'].'" data-transition="slide" data-aside="features" class="drag">
-        <header><button data-view-section="back" data-icon="chevron-left"></button>'.$problem_name['clinical_problem'].' - '.$value['subprob'].'
+        <header><a href="#back" data-view-section="back" data-icon="chevron-left"></a>'.$problem_name['clinical_problem'].' - '.$value['subprob'].'
             <nav class="on-right">
                 <a href="#"><abbr class="text tiny ">v0.1</abbr></a>
             </nav>
