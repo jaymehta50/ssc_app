@@ -10,11 +10,11 @@
         </header>
 
         <article id="one_adult_prob" class="list scroll active">
-            <ul class="intended">
+            <div class="indented"><ul>
                 <li><p>These are the subgroups of problems associated with <span style="font-style:italic;"><?php echo $problem_name['clinical_problem']; ?></span></p>
                 <p>Click on one to see the condition(s) associated with it!</p></li>
-            </ul>
-            <ul class='indenteds'>
+            </ul></div>
+            <div class="indenteds"><ul>
                 <?php
                     $prev = "";
                     $subgroup_array = array();
@@ -28,7 +28,7 @@
                         $prev = $value['problem_subgroup'];
                     }
                 ?>
-            </ul>
+            </ul></div>
         </article>
     </section>
 
@@ -39,16 +39,16 @@
             <nav class="on-right">
                 <a href="#"><abbr class="text tiny ">v0.1</abbr></a>
             </nav>
-        </header><article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><ul class="intended">
+        </header><article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
                 <li><p>These are the conditions associated with <span style="font-style:italic;">'.$problem_name['clinical_problem'].' - '.$value['subprob'].'</span></p>
                 <p>Click on a condition to see when in the course it appears and to make notes on it!</p></li>
-            </ul><ul class="intendeds">';
+            </ul></div><div class="intendeds"><ul>';
             foreach($one_adult_prob as $value2)
             {
                 if($value['subprob']!=$value2['problem_subgroup']) continue;
                 echo '<li class="selectable arrow"><a href="#" data-view-article=""><strong>'.$value2['condition'].'</strong></a></li>';
             }   
-            echo '</ul></article></section>';
+            echo '</ul></div></article></section>';
         }
 
         ?>
