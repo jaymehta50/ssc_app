@@ -9,7 +9,7 @@
             </nav>
         </header>
 
-        <article id="adult_prob_1" class="list indenteds scroll active">
+        <article id="adult_prob_1" class="list indented scroll active">
             <ul>
                 <?php
                     $chunked = array_chunk($adult_probs,(round(count($adult_probs)/3)));
@@ -24,7 +24,7 @@
             </ul>
         </article>
 
-        <article id="adult_prob_2" class="list indenteds scroll">
+        <article id="adult_prob_2" class="list indented scroll">
             <ul>
                 <?php
                     $two_first = FALSE;
@@ -38,7 +38,7 @@
             </ul>
         </article>
 
-        <article id="adult_prob_3" class="list indenteds scroll">
+        <article id="adult_prob_3" class="list indented scroll">
             <ul>
                 <?php
                     $three_first = FALSE;
