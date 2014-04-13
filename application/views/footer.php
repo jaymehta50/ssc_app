@@ -13,11 +13,11 @@
         // Registering the swipe
         $$('article').swipeLeft(function(e) {
             // hide the menu
-            Lungo.View.Aside.hide("#menu");
+            Lungo.View.Aside.hide("#features");
             return false;
         }).swipeRight(function(e) {
              // show the menu
-            Lungo.View.Aside.show("#menu")
+            Lungo.View.Aside.show("#features")
             return false;
         });
     </script>
