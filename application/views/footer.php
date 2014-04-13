@@ -9,6 +9,17 @@
             resources: ['assets/menu.html'],
             history: false
         });
+
+        // Registering the swipe
+        $$('article').swipeLeft(function(e) {
+            // hide the menu
+            Lungo.View.Aside.hide("#menu");
+            return false;
+        }).swipeRight(function(e) {
+             // show the menu
+            Lungo.View.Aside.show("#menu")
+            return false;
+        });
     </script>
 </body>
 </html>
