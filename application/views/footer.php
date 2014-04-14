@@ -10,15 +10,17 @@
             history: false
         });
 
+        function myheaderresize() {
             var span = $('header');
             var fontSize = parseInt(span.css('font-size'));
-            var environment = lng.Core.environment();
+            var environment = Lungo.Core.environment();
 
             do {
                 fontSize--;
                 span.css('font-size', fontSize.toString() + 'px');
             } 
             while (span.width() >= environment.screen.width);
+        };
         
 
         /* Registering the swipe
