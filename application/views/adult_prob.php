@@ -18,38 +18,44 @@
                     {
                         if(!$one_first) $one_first = $value['clinical_problem'][0];
                         $one_last = $value['clinical_problem'][0];
-                        echo '<li class="selectable arrow"><a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
+                        echo '<a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
                     }
                 ?>
             </ul></div>
         </article>
 
-        <article id="adult_prob_2" class="list indented scroll">
-            <ul>
+        <article id="adult_prob_2" class="list scroll">
+            <div class="indented"><ul>
+                <li>This is the Problem List!</li>
+            </ul></div>
+            <div class="indenteds"><ul>
                 <?php
                     $two_first = FALSE;
                     foreach($chunked[1] as $value)
                     {
                         if(!$two_first) $two_first = $value['clinical_problem'][0];
                         $two_last = $value['clinical_problem'][0];
-                        echo '<li class="selectable arrow"><a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
+                        echo '<a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
                     }
                 ?>
-            </ul>
+            </ul></div>
         </article>
 
-        <article id="adult_prob_3" class="list indented scroll">
-            <ul>
+        <article id="adult_prob_3" class="list scroll">
+            <div class="indented"><ul>
+                <li>This is the Problem List!</li>
+            </ul></div>
+            <div class="indenteds"><ul>
                 <?php
                     $three_first = FALSE;
                     foreach($chunked[2] as $value)
                     {
                         if(!$three_first) $three_first = $value['clinical_problem'][0];
                         $three_last = $value['clinical_problem'][0];
-                        echo '<li class="selectable arrow"><a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><strong>'.$value['clinical_problem'].'</strong></a></li>';
+                        echo '<a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
                     }
                 ?>
-            </ul>
+            </ul></div>
         </article>
 
         <footer>

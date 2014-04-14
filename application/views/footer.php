@@ -10,7 +10,7 @@
             history: false
         });
 
-        // Registering the swipe
+        /* Registering the swipe
         $$('article').swipeLeft(function(e) {
             // hide the menu
             Lungo.View.Aside.hide("#features");
@@ -20,6 +20,7 @@
             Lungo.View.Aside.show("#features")
             return false;
         });
+        */
     </script>
 </body>
 </html>
