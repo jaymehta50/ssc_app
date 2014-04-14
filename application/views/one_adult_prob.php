@@ -21,7 +21,7 @@
                         if($prev==$value['problem_subgroup']) continue;
                         $i += 1;
                         $subgroup_array[] = array('problem_id' => $value['clinical_problem_id'], 'subprob' => $value['problem_subgroup'], 'subprob_no' => $i);
-                        echo '<li class="selectable arrow"><a href="#" data-view-section="adultprob_'.$value['clinical_problem_id'].'_subprob_'.$i.'"><strong>'.$value['problem_subgroup'].'</strong></a></li>';
+                        echo '<a href="#" data-view-section="adultprob_'.$value['clinical_problem_id'].'_subprob_'.$i.'"><li class="selectable arrow"><strong>'.$value['problem_subgroup'].'</strong></li></a>';
                         $prev = $value['problem_subgroup'];
                     }
                 ?>
@@ -32,7 +32,7 @@
         <?php
         foreach($subgroup_array as $value) {
             echo '<section id="adultprob_'.$value['problem_id'].'_subprob_'.$value['subprob_no'].'" data-transition="slide" data-aside="features" class="drag">
-        <header><nav><div style="height:100%;"><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></div></nav>'.$problem_name['clinical_problem'].': '.$value['subprob'].'</header>
+        <header><nav><a href="#back" data-view-section="back"><div style="height:100%;"><span class="icon chevron-left"></span></div></a></nav>'.$problem_name['clinical_problem'].': '.$value['subprob'].'</header>
         <article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
                 <li><p>These are the conditions associated with <span style="font-style:italic;">'.$problem_name['clinical_problem'].': '.$value['subprob'].'</span></p>
                 <p>Click on a condition to see when in the course it appears and to make notes on it!</p></li>
@@ -40,7 +40,7 @@
             foreach($one_adult_prob as $value2)
             {
                 if($value['subprob']!=$value2['problem_subgroup']) continue;
-                echo '<li class="selectable arrow"><a href="#" data-view-article=""><strong>'.$value2['condition'].'</strong></a></li>';
+                echo '<a href="#" data-view-article=""><li class="selectable arrow"><strong>'.$value2['condition'].'</strong></li></a>';
             }   
             echo '</ul></div></article></section>';
         }
