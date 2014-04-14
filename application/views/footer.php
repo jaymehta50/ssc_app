@@ -10,6 +10,17 @@
             history: false
         });
 
+        $(function() {
+            var span = $('header');
+            var fontSize = parseInt(span.css('font-size'));
+            var environment = lng.Core.environment();
+
+            do {
+                fontSize--;
+                span.css('font-size', fontSize.toString() + 'px');
+                } while (span.width() >= environment.screen.width);
+        });
+
         /* Registering the swipe
         $$('article').swipeLeft(function(e) {
             // hide the menu
