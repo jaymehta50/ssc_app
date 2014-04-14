@@ -32,7 +32,18 @@
         <?php
         foreach($subgroup_array as $value) {
             echo '<section id="adultprob_'.$value['problem_id'].'_subprob_'.$value['subprob_no'].'" data-transition="slide" data-aside="features" class="drag">
-        <header><nav><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></nav><span style="overflow-x: -webkit-marquee;">'.$problem_name['clinical_problem'].': '.$value['subprob'].'</span></header>
+        <header><nav><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></nav><span style="overflow: hidden;
+  overflow-x:-webkit-marquee;
+  -webkit-marquee-direction: forwards;
+  -webkit-marquee-style: scroll;
+  -webkit-marquee-speed: normal;
+  -webkit-marquee-increment: small;
+  -webkit-marquee-repetition: 5;
+  overflow-x: marquee-line;
+  marquee-direction: forward;
+  marquee-style: scroll;
+  marquee-speed: normal;
+  marquee-play-count: 5;">'.$problem_name['clinical_problem'].': '.$value['subprob'].'</span></header>
         <article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
                 <li><p>These are the conditions associated with <span style="font-style:italic;">'.$problem_name['clinical_problem'].': '.$value['subprob'].'</span></p>
                 <p>Click on a condition to see when in the course it appears and to make notes on it!</p></li>
