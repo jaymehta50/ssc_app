@@ -33,7 +33,7 @@
         foreach($subgroup_array as $value) {
             echo '<section id="adultprob_'.$value['problem_id'].'_subprob_'.$value['subprob_no'].'" data-transition="slide" data-aside="features" class="drag">
         <header><nav><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></nav>';
-        if(($_COOKIE['devwidth'] - 42) > (strlen($problem_name['clinical_problem'].': '.$value['subprob']) * 7.4)) echo "<marquee behaviour='alternate'>".$problem_name['clinical_problem'].': '.$value['subprob']."</marquee>";
+        if(($_COOKIE['devwidth'] - 42) >= (strlen($problem_name['clinical_problem'].': '.$value['subprob']) * 5)) echo "<marquee behavior='alternate'>".$problem_name['clinical_problem'].': '.$value['subprob']."</marquee>";
         else echo $problem_name['clinical_problem'].': '.$value['subprob'];
 
         echo '</header>
