@@ -48,7 +48,7 @@ class Problems_model extends CI_Model {
 
 	public function getcondition($id = null)
 	{
-		if(!isnull($id)) {
+		if(!is_null($id)) {
 			$this->db->where('condition_id', $id);
 			$query = $this->db->get('conditions_adult');
 			$temp = $query->row_array();
