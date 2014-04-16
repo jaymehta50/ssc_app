@@ -48,7 +48,7 @@
             foreach($one_adult_prob as $value2)
             {
                 if($value['subprob']!=$value2['problem_subgroup']) continue;
-                echo '<a href="#" data-view-article=""><li class="selectable arrow"><strong>'.$value2['condition'].'</strong></li></a>';
+                echo '<a href="#" data-view-section="adult_condition_'.$value2['id'].'" data-async="start/adult_condition/'.$value2['id'].'"><li class="selectable arrow"><strong>'.$value2['condition'].'</strong></li></a>';
             }   
             echo '</ul></div></article></section>';
         }

@@ -30,7 +30,7 @@ class Start extends CI_Controller {
 	public function adult_condition($prob_id)
 	{
 		$data['condition'] = $this->problems_model->getcondition($prob_id);
-		//$this->load->view('one_adult_prob',$data);
+		$this->load->view('one_condition',$data);
 	}
 }
 
