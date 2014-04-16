@@ -27,11 +27,10 @@ class Start extends CI_Controller {
 		$this->load->view('one_adult_prob',$data);
 	}
 
-	public function adult_condition($condition_id)
+	public function adult_condition($prob_id)
 	{
-		$data['one_adult_prob'] = $this->problems_model->getoneadultprob($problem);
-		$data['problem_name'] = $this->problems_model->getprobnameadult($problem);
-		$this->load->view('one_adult_prob',$data);
+		$data['condition'] = $this->problems_model->getcondition($prob_id);
+		//$this->load->view('one_adult_prob',$data);
 	}
 }
 

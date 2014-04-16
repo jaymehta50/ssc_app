@@ -38,7 +38,16 @@ class Problems_model extends CI_Model {
 		$query = $this->db->get('problem_names_adult');
 		return $query->row_array();
 	}
-	
+
+	public function getcondition($prob_id)
+	{
+		$this->db->where('id', $prob_id);
+		$query = $this->db->get('problem_names_adult');
+		$temp = $query->row_array();
+		$temp2 = $this->getprobnameadult($temp['clinical_problem_id']);
+		$temp['clinical_problem'] = $temp2['clinical_problem'];
+		return $temp;
+	}
 
 /*
 	public function getcondition($id = null)
