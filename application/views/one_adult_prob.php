@@ -14,7 +14,7 @@
 
         <article id="one_adult_prob" class="list scroll active">
             <div class="indented"><ul>
-                <li><p>These are the subgroups of problems associated with <span style="font-style:italic;"><?php echo $problem_name['clinical_problem']; ?></span></p>
+                <li><p>These are the subgroups of problems associated with:<br /><span style="font-style:italic;text-align:center;margin:3px 0 3px 0;"><?php echo $problem_name['clinical_problem']; ?></span><br /></p>
                 <p>Click on one to see the condition(s) associated with it!</p></li>
             </ul></div>
             <div class="indenteds"><ul>
@@ -41,10 +41,8 @@
         <header><nav><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></nav>';
         if(($_COOKIE['devwidth'] - 42) <= (strlen($problem_name['clinical_problem'].': '.$value['subprob']) * $av_char_width)) echo "<marquee behavior='alternate' scrollamount='2' style='padding-right:7px;'>".$problem_name['clinical_problem'].': '.$value['subprob']."</marquee>";
         else echo $problem_name['clinical_problem'].': '.$value['subprob'];
-
-        echo '</header>
-        <article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
-                <li><p>These are the conditions associated with <span style="font-style:italic;">'.$problem_name['clinical_problem'].': '.$value['subprob'].'</span></p>
+        echo '</header><article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
+                <li><p>These are the conditions associated with:<br /><span style="font-style:italic;text-align:center;margin:3px 0 3px 0;">'.$problem_name['clinical_problem'].' - '.$value['subprob'].'</span><br /></p>
                 <p>Click on a condition to see when in the course it appears and to make notes on it!</p></li>
             </ul></div><div class="intendeds"><ul>';
             foreach($one_adult_prob as $value2)
