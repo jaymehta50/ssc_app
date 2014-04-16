@@ -29,14 +29,7 @@ class Problems_model extends CI_Model {
 		$this->db->order_by('problem_subgroup','asc');
 		$this->db->where('clinical_problem_id', $problem);
 		$query = $this->db->get('problem_list_adult');
-		$toreturn = array();
-		foreach($query->result_array() as $value) {
-			$temp = array();
-			$temp = $value;
-			$temp['condition'] = $this->getcondition($value['condition_id']);
-			$toreturn[] = $temp;
-		}
-		return $toreturn;
+		return $query->result_array();
 	}
 
 	public function getprobnameadult($problem)
@@ -45,7 +38,9 @@ class Problems_model extends CI_Model {
 		$query = $this->db->get('problem_names_adult');
 		return $query->row_array();
 	}
+	
 
+/*
 	public function getcondition($id = null)
 	{
 		if(!is_null($id)) {
@@ -58,9 +53,8 @@ class Problems_model extends CI_Model {
 			$query = $this->db->get('conditions_adult');
 			return $query->result_array();
 		}
-
-
 	}
+	*/
 
 
 }
