@@ -7,7 +7,7 @@
                 <a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a>
             </nav>
             <?php
-                if(($_COOKIE['devwidth'] - 42) >= (strlen($problem_name['clinical_problem']) * $av_char_width)) echo "<marquee behavior='alternate' scrollamount='2' style='padding-right:7px;'>".$problem_name['clinical_problem']."</marquee>";
+                if(($_COOKIE['devwidth'] - 42) <= (strlen($problem_name['clinical_problem']) * $av_char_width)) echo "<marquee behavior='alternate' scrollamount='2' style='padding-right:7px;'>".$problem_name['clinical_problem']."</marquee>";
                 else echo $problem_name['clinical_problem'];
             ?>
         </header>
@@ -39,7 +39,7 @@
         foreach($subgroup_array as $value) {
             echo '<section id="adultprob_'.$value['problem_id'].'_subprob_'.$value['subprob_no'].'" data-transition="slide" data-aside="features" class="drag">
         <header><nav><a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a></nav>';
-        if(($_COOKIE['devwidth'] - 42) >= (strlen($problem_name['clinical_problem'].': '.$value['subprob']) * $av_char_width)) echo "<marquee behavior='alternate' scrollamount='2' style='padding-right:7px;'>".$problem_name['clinical_problem'].': '.$value['subprob']."</marquee>";
+        if(($_COOKIE['devwidth'] - 42) <= (strlen($problem_name['clinical_problem'].': '.$value['subprob']) * $av_char_width)) echo "<marquee behavior='alternate' scrollamount='2' style='padding-right:7px;'>".$problem_name['clinical_problem'].': '.$value['subprob']."</marquee>";
         else echo $problem_name['clinical_problem'].': '.$value['subprob'];
 
         echo '</header>
