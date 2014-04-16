@@ -50,7 +50,3 @@
         }
 
         ?>
-
-<script>
-    window.alert(<?php echo $_COOKIE['devwidth']; ?>);
-</script>
