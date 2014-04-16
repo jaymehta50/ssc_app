@@ -51,7 +51,6 @@
     <!-- App Stylesheet -->
     <link rel="stylesheet" href="<?=$base_url;?>assets/lungo/app.css">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 
 <body>

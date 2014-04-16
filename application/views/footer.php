@@ -10,6 +10,10 @@
             history: false
         });
 
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        document.cookie = "devwidth="+width+"; path=/;";
+
+        /*
         function myheaderresize() {
             var span = $('header');
             var fontSize = parseInt(span.css('font-size'));
@@ -21,9 +25,8 @@
             } 
             while (span.width() >= environment.screen.width);
         };
-        
 
-        /* Registering the swipe
+         Registering the swipe
         $$('article').swipeLeft(function(e) {
             // hide the menu
             Lungo.View.Aside.hide("#features");
