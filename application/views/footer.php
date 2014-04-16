@@ -12,7 +12,7 @@
 
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         document.cookie = "devwidth="+width+"; path=/;";
-        window.alert(width);
+        window.alert(<?php echo $_COOKIE['devwidth']; ?>);
 
         /*
         function myheaderresize() {
