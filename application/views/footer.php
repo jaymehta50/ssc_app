@@ -12,6 +12,7 @@
 
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         document.cookie = "devwidth="+width+"; path=/;";
+        window.alert(width);
 
         /*
         function myheaderresize() {
