@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="<?=$base_url;?>assets/lungo/lungo.icon.css">
     <!-- App Stylesheet -->
     <link rel="stylesheet" href="<?=$base_url;?>assets/lungo/app.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
 </head>
 

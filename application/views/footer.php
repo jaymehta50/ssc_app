@@ -13,6 +13,13 @@
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         document.cookie = "devwidth="+width+"; path=/;";
 
+        <?php
+        for($i=1,$i<=2000,$i++) {
+            echo '$("#condition_reveal_'.$i.'").click(function() {$("#condition_'.$i.'_course").slideToggle();});
+            ';
+        }
+        
+
         /*
         function myheaderresize() {
             var span = $('header');
