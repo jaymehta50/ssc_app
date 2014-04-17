@@ -40,6 +40,14 @@ body[data-os=android] [data-os=ios],body[data-os=android] [data-os=blackerry],bo
 body[data-os=blackberry] [data-os=android],body[data-os=blackberry] [data-os=ios],body[data-os=blackberry] [data-os=firefoxos]{display:none}
 body[data-os=firefoxos] [data-os=android],body[data-os=firefoxos] [data-os=ios],body[data-os=firefoxos] [data-os=blackberry]{display:none}
 
+table.course {width:100%;}
+table.course > tbody > tr > td {text-align:center;padding:3px;border-radius:5px;}
+table.course > tbody > tr > th {padding-top:10px;}
+td.red {background-color:#FF4747;}
+td.amber {background-color:#FFB833;}
+td.green {background-color:#33FF33;}
+
+
 .list li{list-style-type:none;position:relative;text-align:-webkit-match-parent;line-height:inherit;}
 .list li:not(.big){padding:.8em}
 .list li.thumb{display:-webkit-box;display:-moz-box;display:-ms-box;display:-o-box;display:box;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-ms-box-orient:horizontal;-o-box-orient:horizontal;box-orient:horizontal;}

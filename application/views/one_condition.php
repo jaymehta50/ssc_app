@@ -17,13 +17,14 @@
                 </li>
                 <li>
                     <h2>Course Progress</h2>
-                    <table>
+                    <table class="course">
+                        <tbody>
                         <tr>
                             <td>Core Condition</td>
                             <td>
                                 <?php
-                                    if($condition['Core']==1) echo "<td style='background-color:#33FF33;'>Yes</td>";
-                                    else echo "<td style='background-color:#FF4747;'>No</td>";
+                                    if($condition['Core']==1) echo "<td class='green'>Yes</td>";
+                                    else echo "<td class='red'>No</td>";
                                 ?>
                             </td>
                         </tr>
@@ -31,9 +32,9 @@
                             <td>Intro Course</td>
                             <td>
                                 <?php
-                                    if($condition['Core']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['Core']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['Core']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['Core']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -41,9 +42,9 @@
                             <td>Stage 1 & 3 Medicine</td>
                             <td>
                                 <?php
-                                    if($condition['medicine_1_3']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['medicine_1_3']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['medicine_1_3']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['medicine_1_3']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -52,9 +53,9 @@
                             <td>General Practice</td>
                             <td>
                                 <?php
-                                    if($condition['general_practice']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['general_practice']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['general_practice']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['general_practice']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -63,9 +64,9 @@
                             <td>Surgery</td>
                             <td>
                                 <?php
-                                    if($condition['surgery_1']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['surgery_1']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['surgery_1']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['surgery_1']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -75,9 +76,9 @@
                             <td>Women's Health</td>
                             <td>
                                 <?php
-                                    if($condition['women_health_2']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['women_health_2']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['women_health_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['women_health_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -86,9 +87,9 @@
                             <td>Psychiatry</td>
                             <td>
                                 <?php
-                                    if($condition['psych_2']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['psych_2']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['psych_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['psych_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -97,9 +98,9 @@
                             <td>NRO</td>
                             <td>
                                 <?php
-                                    if($condition['nro_2']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['nro_2']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['nro_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['nro_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -108,9 +109,9 @@
                             <td>Oncology</td>
                             <td>
                                 <?php
-                                    if($condition['oncology_2']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['oncology_2']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['oncology_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['oncology_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -119,9 +120,9 @@
                             <td>Infectious Disease</td>
                             <td>
                                 <?php
-                                    if($condition['infectious_disease_2']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['infectious_disease_2']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['infectious_disease_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['infectious_disease_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -130,9 +131,9 @@
                             <td>Genitourinary Medicine</td>
                             <td>
                                 <?php
-                                    if($condition['gu_medicine_2']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['gu_medicine_2']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['gu_medicine_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['gu_medicine_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -141,9 +142,9 @@
                             <td>Cardiothoracic Medicine</td>
                             <td>
                                 <?php
-                                    if($condition['cardiothor_medicine_2']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['cardiothor_medicine_2']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['cardiothor_medicine_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['cardiothor_medicine_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -152,9 +153,9 @@
                             <td>Acute Care</td>
                             <td>
                                 <?php
-                                    if($condition['acute_care_2']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['acute_care_2']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['acute_care_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['acute_care_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -164,9 +165,9 @@
                             <td>Perioperative Medicine</td>
                             <td>
                                 <?php
-                                    if($condition['perioperative_3']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['perioperative_3']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['perioperative_3']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['perioperative_3']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -175,9 +176,9 @@
                             <td>Surgery Stage 3</td>
                             <td>
                                 <?php
-                                    if($condition['surgery_3']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['surgery_3']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['surgery_3']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['surgery_3']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -186,9 +187,9 @@
                             <td>Dermatology</td>
                             <td>
                                 <?php
-                                    if($condition['dermatology_3']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['dermatology_3']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['dermatology_3']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['dermatology_3']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -197,9 +198,9 @@
                             <td>Opthalmology</td>
                             <td>
                                 <?php
-                                    if($condition['opthalmology_3']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['opthalmology_3']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['opthalmology_3']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['opthalmology_3']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
@@ -208,12 +209,13 @@
                             <td>ENT Medicine</td>
                             <td>
                                 <?php
-                                    if($condition['ent_3']==3) echo "<td style='background-color:#33FF33;'>Green</td>";
-                                    elseif($condition['ent_3']==2) echo "<td style='background-color:#FFB833;'>Amber</td>";
-                                    else echo "<td style='background-color:#FF4747;'>Red</td>";
+                                    if($condition['ent_3']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['ent_3']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
                                 ?>
                             </td>
                         </tr>
+                        </tbody>
                     </table>
                 </li>
 
