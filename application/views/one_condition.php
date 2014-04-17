@@ -190,7 +190,7 @@
                         <form action="" method="POST">
                             <fieldset>
                                 <textarea>Enter your new note here...</textarea>
-                                <input type="submit" name="submit" class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" />
+                                <button class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" type="submit"></button>
                             </fieldset>
                         </form>
                     </div>
