@@ -14,7 +14,7 @@
         document.cookie = "devwidth="+width+"; path=/;";
 
         <?php
-        for($i=1,$i<=2000,$i++) {
+        for($i=1;$i<=200;$i++) {
             echo '$("#condition_reveal_'.$i.'").click(function() {$("#condition_'.$i.'_course").slideToggle();});
             ';
         }
