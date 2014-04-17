@@ -7,7 +7,7 @@ class Start extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->model('problems_model');
-		$this->data['av_char_width'] = 7;
+		$this->av_char_width = 7;
 	}
 
 	public function index()
@@ -23,6 +23,7 @@ class Start extends CI_Controller {
 
 	public function adult_prob($problem)
 	{
+		$data['av_char_width'] = $this->av_char_width;
 		$data['one_adult_prob'] = $this->problems_model->getoneadultprob($problem);
 		$data['problem_name'] = $this->problems_model->getprobnameadult($problem);
 		$this->load->view('one_adult_prob',$data);
@@ -30,6 +31,7 @@ class Start extends CI_Controller {
 
 	public function adult_condition($prob_id)
 	{
+		$data['av_char_width'] = $this->av_char_width;
 		$data['condition'] = $this->problems_model->getcondition($prob_id);
 		$this->load->view('one_condition',$data);
 	}
