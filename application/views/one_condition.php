@@ -9,7 +9,12 @@
             ?>
         </header>
 
-        <article id="condition_<?php echo $condition['id']; ?>" class="list indented scroll active">
+        <nav data-control="groupbar">
+            <a href="#" data-view-article="course_progress" data-label="Course Progress" class="active"></a>
+            <a href="#" data-view-article="my_notes" data-label="My Notes"></a>
+        </nav>
+
+        <article id="course_progress" class="list indented scroll active">
             <ul>
                 <li>
                     <p>You are currently looking at:</p><div style="font-style:italic;text-align:center;margin:9px 0 10px 0;"><p><?php echo $condition['condition']; ?></p></div>
@@ -51,7 +56,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-
                         <tr>
                             <td>Surgery</td>
                                 <?php
@@ -60,7 +64,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr><th colspan="2">Stage 2</th></tr>
                         <tr>
                             <td>Women's Health</td>
@@ -70,7 +73,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Psychiatry</td>
                                 <?php
@@ -79,7 +81,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>NRO</td>
                                 <?php
@@ -88,7 +89,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Oncology</td>
                                 <?php
@@ -97,7 +97,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Infectious Disease</td>
                                 <?php
@@ -106,7 +105,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Genitourinary Medicine</td>
                                 <?php
@@ -115,7 +113,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Cardiothoracic Medicine</td>
                                 <?php
@@ -124,7 +121,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Acute Care</td>
                                 <?php
@@ -133,7 +129,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr><th colspan="2">Stage 3</th></tr>
                         <tr>
                             <td>Perioperative Medicine</td>
@@ -143,7 +138,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Surgery Stage 3</td>
                                 <?php
@@ -152,7 +146,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Dermatology</td>
                                 <?php
@@ -161,7 +154,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>Opthalmology</td>
                                 <?php
@@ -170,7 +162,6 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
-                        
                         <tr>
                             <td>ENT Medicine</td>
                                 <?php
@@ -182,7 +173,30 @@
                         </tbody>
                     </table>
                 </li>
-
             </ul>
         </article>
+
+
+
+        <article id="my_notes" class="list indented scroll">
+            <ul>
+                <li>
+                    <p>You are currently looking at:</p><div style="font-style:italic;text-align:center;margin:9px 0 10px 0;"><p><?php echo $condition['condition']; ?></p></div>
+                    <p>You can add your own notes below:</p>
+                </li>
+                <li>
+                    <h2>Add a Note</h2>
+                    <div class="form">
+                        <form action="" method="POST">
+                            <fieldset>
+                                <textarea>Enter your new note here...</textarea>
+                                <input type="submit" name="submit" class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" />
+                            </fieldset>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </article>
+
+
     </section>
