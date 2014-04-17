@@ -1,6 +1,3 @@
-<?php
-    $av_char_width = 7;
-?>
 <section id="adult_prob_<?php echo $one_adult_prob[0]['clinical_problem_id']; ?>" data-transition="slide" data-aside="features" class="drag">
         <header>
             <nav>

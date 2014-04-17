@@ -7,6 +7,7 @@ class Start extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->model('problems_model');
+		$this->data['av_char_width'] = 7;
 	}
 
 	public function index()
