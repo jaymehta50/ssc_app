@@ -18,6 +18,7 @@
             echo '$("#condition_reveal_'.$i.'").click(function() {$("#condition_'.$i.'_course").slideToggle();});
             ';
         }
+        ?>
         
 
         /*
