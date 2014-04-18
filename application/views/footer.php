@@ -19,7 +19,7 @@
 
             var result = Lungo.Service.post(url, data, null, "json");
 
-            document.getElementById("my_notes_"+a).innerHTML = result;
+            document.getElementById("my_notes_"+a).innerHTML = result.responseText;
             Lungo.Router.article("adult_condition_"+a, "my_notes");
 
         }
