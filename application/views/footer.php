@@ -13,12 +13,15 @@
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         document.cookie = "devwidth="+width+"; path=/;";
 
-        <?php
-        for($i=1;$i<=200;$i++) {
-            echo '$("#condition_reveal_'.$i.'").click(function() {$("#condition_'.$i.'_course").slideToggle();});
-            ';
+        function saveNote(a) {
+            var url = "<?php echo $base_url; ?>start/addnote";
+            var data = {id: a, newnote: document.getElementById("newnote").value};
+            var parseResponse = function(result){
+                //Do something
+            };
+
+            Lungo.Service.post(url, data, parseResponse, "json");
         }
-        ?>
         
 
         /*

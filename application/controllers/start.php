@@ -32,8 +32,14 @@ class Start extends CI_Controller {
 	public function adult_condition($prob_id)
 	{
 		$data['av_char_width'] = $this->av_char_width;
+		$data['base_url'] = base_url();
 		$data['condition'] = $this->problems_model->getcondition($prob_id);
 		$this->load->view('one_condition',$data);
+	}
+
+	public function addnote()
+	{
+		$this->problems_model->addnote($this->input->post('id'), $this->input->post('newnote'), $_SERVER['REMOTE_USER']);
 	}
 }
 

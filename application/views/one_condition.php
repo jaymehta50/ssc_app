@@ -187,12 +187,10 @@
                 <li>
                     <h2>Add a Note</h2>
                     <div class="form">
-                        <form action="" method="POST">
-                            <fieldset>
-                                <textarea>Enter your new note here...</textarea>
-                                <button class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" type="submit"></button>
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <textarea id="newnote" placeholder="Enter your new note here..."></textarea>
+                            <button class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" onclick="saveNote('<?php echo $condition["id"]; ?>')"></button>
+                        </fieldset>
                     </div>
                 </li>
             </ul>

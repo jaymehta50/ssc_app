@@ -49,6 +49,17 @@ class Problems_model extends CI_Model {
 		return $temp;
 	}
 
+	public function addnote($cond_id, $note, $user)
+	{
+		$data = array(
+			'user' => $user,
+			'condition_id' => $cond_id,
+			'note' => $note
+			);
+		$this->db->insert('notes', $data);
+		return $this->db->insert_id();
+	}
+
 /*
 	public function getcondition($id = null)
 	{
