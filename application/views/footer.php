@@ -16,8 +16,10 @@
         function saveNote(a) {
             var url = "<?php echo $base_url; ?>start/addnote";
             var data = {id: a, newnote: document.getElementById("newnote").value};
-
-            var result = Lungo.Service.post(url, data);
+            var parseResponse = function(result) {
+                //Do Nothing
+            }
+            var result = Lungo.Service.post(url, data, parseResponse, "html");
 
             document.getElementById("my_notes_"+a).innerHTML = result.responseText;
             Lungo.Router.article("adult_condition_"+a, "my_notes");
