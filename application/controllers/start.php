@@ -37,7 +37,7 @@ class Start extends CI_Controller {
 		$data['notes'] = $this->problems_model->getnotes($prob_id, $_SERVER['REMOTE_USER']);
 		$this->load->view('one_condition',$data);
 		$this->load->view('notes', $data);
-		echo "</article></section>";
+		echo "</div></article></section>";
 	}
 
 	public function addnote()
