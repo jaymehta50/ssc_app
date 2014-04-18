@@ -17,7 +17,8 @@
             var url = "<?php echo $base_url; ?>start/addnote";
             var data = {id: a, newnote: document.getElementById("newnote").value};
             var parseResponse = function(result){
-                //Do something
+                document.getElementById("my_notes_"+a).innerHTML = result;
+                Lungo.Router.article("adult_condition_"+a, "my_notes_"+a);
             };
 
             Lungo.Service.post(url, data, parseResponse, "json");

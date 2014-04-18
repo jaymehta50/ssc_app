@@ -49,6 +49,16 @@ class Problems_model extends CI_Model {
 		return $temp;
 	}
 
+	public function getnotes($condition_id, $user)
+	{
+		$this->db->where('user', $user);
+		$this->db->where('condition_id', $condition_id);
+		$this->db->order_by('date_created','asc');
+		$query = $this->db->get('notes');
+		if($query->num_rows()==0) return FALSE;
+		else return $query->result_array();
+	}
+
 	public function addnote($cond_id, $note, $user)
 	{
 		$data = array(

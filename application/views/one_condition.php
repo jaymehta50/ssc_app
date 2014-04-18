@@ -11,7 +11,8 @@
 
         <nav data-control="groupbar">
             <a href="#" data-view-article="course_progress" data-label="Course Progress" class="active"></a>
-            <a href="#" data-view-article="my_notes" data-label="My Notes"></a>
+            <a href="#" data-view-article="add_note" data-label="Add New Note"></a>
+            <a href="#" data-view-article="my_notes_<?php echo $condition['id']; ?>" data-label="My Notes"></a>
         </nav>
 
         <article id="course_progress" class="list indented scroll active">
@@ -178,7 +179,7 @@
 
 
 
-        <article id="my_notes" class="list indented scroll">
+        <article id="add_note" class="list indented scroll">
             <ul>
                 <li>
                     <p>You are currently looking at:</p><div style="font-style:italic;text-align:center;margin:9px 0 10px 0;"><p><?php echo $condition['condition']; ?></p></div>
@@ -197,4 +198,4 @@
         </article>
 
 
-    </section>
+        <article id="my_notes_<?php echo $condition['id']; ?>" class="list indented scroll">

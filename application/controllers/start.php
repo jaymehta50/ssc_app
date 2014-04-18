@@ -34,12 +34,17 @@ class Start extends CI_Controller {
 		$data['av_char_width'] = $this->av_char_width;
 		$data['base_url'] = base_url();
 		$data['condition'] = $this->problems_model->getcondition($prob_id);
+		$data['notes'] = $this->problems_model->getnotes($prob_id, $_SERVER['REMOTE_USER']);
 		$this->load->view('one_condition',$data);
+		$this->load->view('notes', $data);
+		echo "</article></section>";
 	}
 
 	public function addnote()
 	{
 		$this->problems_model->addnote($this->input->post('id'), $this->input->post('newnote'), $_SERVER['REMOTE_USER']);
+		$data['notes'] = $this->problems_model->getnotes($this->input->post('id'), $_SERVER['REMOTE_USER']);
+		$this->load->view('notes', $data);
 	}
 }
 
