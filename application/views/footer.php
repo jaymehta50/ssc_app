@@ -20,7 +20,7 @@
                 //Do Nothing
             }
             var result = Lungo.Service.post(url, data, parseResponse, "html");
-            var xmlDoc=xmlhttp.responseXML;
+            var xmlDoc=result.responseXML;
 
             document.getElementById("my_notes_"+a).innerHTML = xmlDoc.getElementsByTagName("my_notes_"+a)[0].childNodes[0].nodeValue;
             Lungo.Router.article("adult_condition_"+a, "my_notes");
