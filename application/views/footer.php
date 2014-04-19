@@ -16,17 +16,14 @@
         function saveNote(a) {
             var url = "start/addnote";
             var data = {id: a, newnote: document.getElementById("newnote").value};
-            var parseResponse = function(result) {
-                //Do Nothing
-            }
+            
             var result = Lungo.Service.post(url, data, parseResponse, "html");
-            var xmlDoc=result.responseXML;
-
-            document.getElementById("my_notes_"+a).innerHTML = xmlDoc.getElementsByTagName("my_notes_"+a)[0].childNodes[0].nodeValue;
-            Lungo.Router.article("adult_condition_"+a, "my_notes");
-
         }
-        
+
+        function parseResponse(result) {
+            document.getElementById("my_notes_"+a).innerHTML = result.responseText;
+            Lungo.Router.article("adult_condition_"+a, "my_notes");
+        }
 
         /*
         function myheaderresize() {
