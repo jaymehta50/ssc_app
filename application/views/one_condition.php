@@ -215,12 +215,12 @@
                         {
                             foreach($notes as $value)
                             {
-                                echo "<li><div class='my_note'><p>".$value['note']."</p></div></li>";
+                                echo "<li><div class='my_note'><p>".html_entity_decode($value['note'])."</p></div></li>";
                             }
                         }
                         ?>
                 </ul>
             </div>
         </article>
-        
+
     </section>
