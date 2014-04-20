@@ -25,6 +25,7 @@
             var list=document.createElement("LI");
             list.appendChild(div);
             document.getElementById("list_my_notes_"+a).appendChild(list);
+            document.getElementById("no_notes_here_"+a).style.display="none";
 
             Lungo.Router.article("adult_condition_"+a, "my_notes");
         }

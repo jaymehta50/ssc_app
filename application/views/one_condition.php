@@ -210,7 +210,9 @@
                         <h2>My Notes</h2>
                     </li>
                     <?php
-                        if(!$notes) echo "<li><p>You do not have any notes on this condition at the moment</p></li>";
+                        echo "<li id='no_notes_here_".$condition['id']."'";
+                        if($notes) echo " style='display:none;'"
+                        echo "><p>You do not have any notes on this condition at the moment</p></li>";
                         else
                         {
                             foreach($notes as $value)
