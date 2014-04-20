@@ -20,7 +20,7 @@
             Lungo.Service.post(url, data);
 
             var para=document.createElement("P");
-            para.appendChild(document.createTextNode(document.getElementById("newnote").value));
+            para.appendChild(document.createTextNode(document.getElementById("newnote").value.replace(/\r?\n/g, '<br />')));
             var div=document.createElement("DIV");
             div.className = "my_note";
             div.appendChild(para);

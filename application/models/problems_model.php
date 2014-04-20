@@ -64,7 +64,7 @@ class Problems_model extends CI_Model {
 		$data = array(
 			'user' => $user,
 			'condition_id' => $cond_id,
-			'note' => $note
+			'note' => htmlentities(nl2br($note), ENT_QUOTES)
 			);
 		$this->db->insert('notes', $data);
 		return $this->db->insert_id();
