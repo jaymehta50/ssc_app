@@ -213,7 +213,7 @@
                         echo "<li id='no_notes_here_".$condition['id']."'";
                         if($notes) echo " style='display:none;'";
                         echo "><p>You do not have any notes on this condition at the moment</p></li>";
-                        else
+                        if($notes)
                         {
                             foreach($notes as $value)
                             {
