@@ -17,16 +17,15 @@
             var url = "start/addnote";
             var data = {id: a, newnote: document.getElementById("newnote").value};
             
-            Lungo.Service.post(url, data);
+            Lungo.Service.post(url, data, null, "text");
 
-            var para=document.createElement("P");
-            para.appendChild(document.createTextNode(document.getElementById("newnote").value.replace(/\r?\n/g, '<br />')));
             var div=document.createElement("DIV");
             div.className = "my_note";
-            div.appendChild(para);
+            div.innerHTML = "<p>" + document.getElementById("newnote").value.replace(/\r?\n/g, '<br />') + "</p>";
             var list=document.createElement("LI");
             list.appendChild(div);
             document.getElementById("list_my_notes_"+a).appendChild(list);
+
             Lungo.Router.article("adult_condition_"+a, "my_notes");
         }
 
