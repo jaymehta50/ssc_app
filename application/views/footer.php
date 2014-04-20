@@ -11,6 +11,7 @@
         });
 
         alert('It works!');
+        alert('It works again woo!');
 
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         document.cookie = "devwidth="+width+"; path=/;";
