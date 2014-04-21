@@ -18,7 +18,7 @@
         <article id="course_progress" class="list indented scroll active">
             <ul>
                 <li>
-                    <div style="text-align:center;margin:9px 0 10px 0;"><strong><?php echo $condition['condition']; ?></strong></div>
+                    <div style="text-align:center;margin:9px 0 10px 0;"><strong class='text bold'><?php echo $condition['condition']; ?></strong></div>
                     <p>You are currently looking at the condition: <?php echo $condition['condition']." - ".$condition['clinical_problem']." ".$condition['problem_subgroup']; ?></p>
                     <p>You can review when in the course you would be expected to learn about this condition, add your own notes and review any existing notes on this condition.</p>
                 </li>
@@ -183,7 +183,7 @@
         <article id="add_note" class="list indented scroll">
             <ul>
                 <li>
-                    <div style="text-align:center;margin:9px 0 10px 0;"><strong><?php echo $condition['condition']; ?></strong></div>
+                    <div style="text-align:center;margin:9px 0 10px 0;"><strong class='text bold'><?php echo $condition['condition']; ?></strong></div>
                     <p>You are currently looking at the condition: <?php echo $condition['condition']." - ".$condition['clinical_problem']." ".$condition['problem_subgroup']; ?></p>
                     <p>You can review when in the course you would be expected to learn about this condition, add your own notes and review any existing notes on this condition.</p>
                 </li>
@@ -204,7 +204,7 @@
             <div id="my_notes_<?php echo $condition['id']; ?>">
                 <ul id="list_my_notes_<?php echo $condition['id']; ?>">
                     <li>
-                    <div style="text-align:center;margin:9px 0 10px 0;"><strong><?php echo $condition['condition']; ?></strong></div>
+                    <div style="text-align:center;margin:9px 0 10px 0;"><strong class='text bold'><?php echo $condition['condition']; ?></strong></div>
                     <p>You are currently looking at the condition: <?php echo $condition['condition']." - ".$condition['clinical_problem']." ".$condition['problem_subgroup']; ?></p>
                     <p>You can review when in the course you would be expected to learn about this condition, add your own notes and review any existing notes on this condition.</p>
                 </li>

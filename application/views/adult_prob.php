@@ -8,7 +8,7 @@
 
         <article id="adult_prob_1" class="list scroll active">
             <div class="indented"><ul>
-                <li><h4>This is the Problem List!</h4></li>
+                <li><strong class='text bold'>This is the Problem List!</strong></li>
             </ul></div>
             <div class="indenteds"><ul>
                 <?php
@@ -26,7 +26,7 @@
 
         <article id="adult_prob_2" class="list scroll">
             <div class="indented"><ul>
-                <li><strong>This is the Problem List!</strong></li>
+                <li><strong class='text bold'>This is the Problem List!</strong></li>
             </ul></div>
             <div class="indenteds"><ul>
                 <?php
@@ -43,7 +43,7 @@
 
         <article id="adult_prob_3" class="list scroll">
             <div class="indented"><ul>
-                <li><strong>This is the Problem List!</strong></li>
+                <li><strong class='text bold'>This is the Problem List!</strong></li>
             </ul></div>
             <div class="indenteds"><ul>
                 <?php
