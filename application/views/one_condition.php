@@ -205,7 +205,7 @@
                 <ul id="list_my_notes_<?php echo $condition['id']; ?>">
                 <li>
                     <div style="text-align:center;margin:9px 0 10px 0;"><strong class='text bold'><?php echo $condition['condition']; ?></strong></div>
-                    <p>You are currently looking at the condition: <?php echo $condition['condition']." (".$condition['clinical_problem']." ".$condition['problem_subgroup'].")"; ?>.</p><br />
+                    <p>You are currently looking at the condition: <?php echo $condition['condition']." (".$condition['clinical_problem'].": ".$condition['problem_subgroup'].")"; ?>.</p><br />
                     <p>Here you can review any notes that you have made on this condition.</p>
                 </li>
                     <li>

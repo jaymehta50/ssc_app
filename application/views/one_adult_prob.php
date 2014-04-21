@@ -41,7 +41,7 @@
         else echo $problem_name['clinical_problem'].': '.$value['subprob'];
         echo '</header><article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
                 <li><div style="text-align:center;margin:9px 0 10px 0;"><strong class="text bold">'.$problem_name['clinical_problem'].': '.$value['subprob'].'</strong></div>
-                <p>These are the conditions associated with the problem: '.$problem_name['clinical_problem'].': '.$value['subprob'].'.</p><br />
+                <p>These are the conditions associated with the problem "'.$problem_name['clinical_problem'].': '.$value['subprob'].'".</p><br />
                 <p>Click on a condition to see when in the course it appears and to make notes on it!</p></li>
             </ul></div><div class="intendeds"><ul>';
             foreach($one_adult_prob as $value2)
