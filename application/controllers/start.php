@@ -38,6 +38,13 @@ class Start extends CI_Controller {
 		$this->load->view('one_condition',$data);
 	}
 
+	public function my_notes()
+	{
+		$data['my_notes'] = $this->problems_model->getnotes(FALSE, $_SERVER['REMOTE_USER']);
+		if($data['my_notes']) $data['condition_names'] = $this->problems_model->getconditionnames($data['my_notes']);
+		$this->load->view('my_notes',$data);
+	}
+
 	public function addnote()
 	{
 		echo $this->problems_model->addnote($this->input->post('id'), $this->input->post('newnote'), $_SERVER['REMOTE_USER']);

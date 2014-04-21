@@ -20,7 +20,7 @@
             </li>
 
             <!-- Forms -->
-            <li data-view-section="my_comments">
+            <li data-view-section="my_notes" data-async="start/my_notes/">
                 <strong>My Comments</strong>
             </li>
 

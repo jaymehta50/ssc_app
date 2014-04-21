@@ -8,7 +8,7 @@
 
         <article id="adult_prob_1" class="list scroll active">
             <div class="indented"><ul>
-                <li>This is the Problem List!</li>
+                <li><p>This is the Problem List!</p></li>
             </ul></div>
             <div class="indenteds"><ul>
                 <?php

@@ -52,11 +52,30 @@ class Problems_model extends CI_Model {
 	public function getnotes($condition_id, $user)
 	{
 		$this->db->where('user', $user);
-		$this->db->where('condition_id', $condition_id);
+		if($condition_id) $this->db->where('condition_id', $condition_id);
+		$this->db->order_by('condition_id','asc');
 		$this->db->order_by('date_created','asc');
 		$query = $this->db->get('notes');
 		if($query->num_rows()==0) return FALSE;
 		else return $query->result_array();
+	}
+
+	public function getconditionnames($array)
+	{
+		$temp = array();
+		foreach($array as $value)
+			{
+				if(!isset($temp[$value['condition_id']])) $temp[$value['condition_id']] = $this->get_cond_name($value['condition_id']);
+			}
+		return $temp;
+	}
+
+	public function get_cond_name($cond_id)
+	{
+		$this->db->where('id', $cond_id);
+		$this->db->select('condition');
+		$query = $this->db->get('problem_list_adult');
+		return $query->row_array()['condition'];
 	}
 
 	public function addnote($cond_id, $note, $user)
