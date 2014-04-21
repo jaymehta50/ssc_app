@@ -27,9 +27,10 @@
                             <li><div class='intendeds'><ul><li><strong>".$condition_names[$note['condition_id']]."</strong></li>";
                         }
                         echo "<li>".html_entity_decode($note['note'])."</li>";
+                        $prev_id = $note['condition_id'];
                     }
                 }
-                
+
 
             ?>
             </ul></div></li></ul>
