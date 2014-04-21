@@ -11,20 +11,33 @@
 
         <article id="intro-article" class="list indenteds scroll">
             <ul>
-                <li class="text small">
+                <h4>
                     Welcome to the in-development app for the Cambridge Clinical Medicine Problem List!
+                </h4>
+                <li>
+                    <strong class="text bold">How to Use This App</strong>
+                    <p class="text">
+                        Firstly - you can access the menu for this app by clicking on the Menu icon (<span class="icon menu"></span>) in the top-left of this page.
+                    </p><br />
+                    <p class="text">
+                        From this menu you can choose between looking at the Problem List, your Own Notes or General Info about the Clinical Problems and Conditions list.
+                    </p><br />
+                    <p class="text">
+                        Clicking on "List of Clinical Problems" will show you all of the major problems in the Problem List (sub-divided into 3 pages - use the links at the bottom!). From here you can click on any problem to see how it is subdivided into subgroups, and clicking on a subgroup will show the conditions associated with that problem.
+                    </p><br />
+                    <p class="text">
+                        You can then click on any condition, which will show you when in the course you are likely to see a patient presenting with this condition. You will also be able to add your own notes to that condition, and review any previously made notes.
+                    </p><br />
                 </li>
                 <li>
-                    <strong class="text bold">Filter</strong>
-                    <span class="text tiny">
-                        Use the menu on the left to filter through clinical conditions.
-                    </span>
-                </li>
-                <li>
-                    <strong class="text bold">Personal Notes</strong>
-                    <span class="text tiny">
-                        Add notes to any condition, and review them all in one convenient place.
-                    </span>
+                    <strong class="text bold">Future Plans</strong>
+                    <p class="text">
+                        <ol>
+                            <li>Add the ability to edit and delete existing notes</li>
+                            <li>Create the General Info page</li>
+                            <li>Generally improve layout and speed of loading</li>
+                        </ol>
+                    </p>
                 </li>
                 <li>
                     <strong class="text bold">Course Timings</strong>
