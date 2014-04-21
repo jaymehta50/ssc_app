@@ -9,7 +9,7 @@
             </nav>
         </header>
 
-        <article id="intro-article" class="list indenteds scroll active">
+        <article id="intro-article" class="list indented scroll active">
             <ul>
                 <li><p>
                     Welcome to the in-development app for the Cambridge Clinical Medicine Problem List!
@@ -27,19 +27,13 @@
                     </p><br />
                     <p class="text">
                         You can then click on any condition, which will show you when in the course you are likely to see a patient presenting with this condition. You will also be able to add your own notes to that condition, and review any previously made notes.
-                    </p><br />
+                    </p>
                 </li>
                 <li>
                     <strong class="text bold">Future Plans</strong>
-                            <p>Add the ability to edit and delete existing notes</p>
-                            <p>Create the General Info page</p>
-                            <p>Generally improve layout and speed of loading</p>
-                </li>
-                <li>
-                    <strong class="text bold">Course Timings</strong>
-                    <span class="text tiny">
-                        Quickly see whether a condition is a core topic or not, and when in the clinical course you are likely to be tested on it.
-                    </span>
+                            <p>Add the ability to edit and delete existing notes.</p>
+                            <p>Create the General Info page.</p>
+                            <p>Generally improve layout and speed of loading.</p>
                 </li>
                 <?php
                 /*<li>
