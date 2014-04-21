@@ -12,7 +12,7 @@
         <article id="one_adult_prob" class="list scroll active">
             <div class="indented"><ul>
                 <li><div style="text-align:center;margin:9px 0 10px 0;"><strong class='text bold'><?php echo $problem_name['clinical_problem']; ?></strong></div>
-                <p>Below are the sub-groups of problems associated with <?php echo $problem_name['clinical_problem']; ?>.</p><br />
+                <p>Below are the sub-groups of problems associated with "<?php echo $problem_name['clinical_problem']; ?>".</p><br />
                 <p>Go back to see the Problem List, or click on an option below to see the condition(s) associated with each problem.</p></li>
             </ul></div>
             <div class="indenteds"><ul>
