@@ -18,20 +18,18 @@
                     {
                         if($first && $prev_id<>$note['condition_id'])
                         {
-                            echo "<li><strong>".$condition_names[$note['condition_id']]."</strong></li>";
+                            echo "<a href='#' data-view-section='adult_condition_".$note['condition_id']." data-async='start/adult_condition/".$note['condition_id']."''><li class='selectable arrow'><strong>".$condition_names[$note['condition_id']]."</strong></li></a>";
                             $first = FALSE;
                         }
                         elseif($prev_id<>$note['condition_id'])
                         {
                             echo "<li class='anchor contrast'></li>
-                            <li><strong>".$condition_names[$note['condition_id']]."</strong></li>";
+                            <a href='#' data-view-section='adult_condition_".$note['condition_id']." data-async='start/adult_condition/".$note['condition_id']."''><li class='selectable arrow'><strong>".$condition_names[$note['condition_id']]."</strong></li></a>";
                         }
                         echo "<li>".html_entity_decode($note['note'])."</li>";
                         $prev_id = $note['condition_id'];
                     }
                 }
-
-
             ?>
             </ul>
         </article>
