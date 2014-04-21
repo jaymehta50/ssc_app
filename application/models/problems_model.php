@@ -75,7 +75,8 @@ class Problems_model extends CI_Model {
 		$this->db->where('id', $cond_id);
 		$this->db->select('condition');
 		$query = $this->db->get('problem_list_adult');
-		return $query->row_array()['condition'];
+		$temp = $query->row_array();
+		return $temp['condition'];
 	}
 
 	public function addnote($cond_id, $note, $user)
