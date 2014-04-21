@@ -41,9 +41,8 @@ class Start extends CI_Controller {
 	public function my_notes()
 	{
 		$data['my_notes'] = $this->problems_model->getnotes(FALSE, $_SERVER['REMOTE_USER']);
-		echo "<pre>".print_r($data['my_notes'])."</pre>";
 		if($data['my_notes']) $data['condition_names'] = $this->problems_model->getconditionnames($data['my_notes']);
-		//$this->load->view('my_notes',$data);
+		$this->load->view('my_notes',$data);
 	}
 
 	public function addnote()
