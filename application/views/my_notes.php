@@ -6,7 +6,7 @@
             My Notes
         </header>
 
-        <article id="my_notes" class="list scroll intended active">
+        <article id="my_notes" class="list scroll intendeds active">
             <ul>
             <?php
                 if(!$my_notes) echo "<li><h2>You have not created any notes yet!</h2></li>";
@@ -18,13 +18,13 @@
                     {
                         if($first && $prev_id<>$note['condition_id'])
                         {
-                            echo "<li><div class='intendeds'><ul><li><strong>".$condition_names[$note['condition_id']]."</strong></li>";
+                            echo "<li><strong>".$condition_names[$note['condition_id']]."</strong></li>";
                             $first = FALSE;
                         }
                         elseif($prev_id<>$note['condition_id'])
                         {
-                            echo "</ul></div></li>
-                            <li><div class='intendeds'><ul><li><strong>".$condition_names[$note['condition_id']]."</strong></li>";
+                            echo "<li class='anchor contrast'></li>
+                            <li><strong>".$condition_names[$note['condition_id']]."</strong></li>";
                         }
                         echo "<li>".html_entity_decode($note['note'])."</li>";
                         $prev_id = $note['condition_id'];
@@ -33,7 +33,7 @@
 
 
             ?>
-            </ul></div></li></ul>
+            </ul>
         </article>
 
     </section>
