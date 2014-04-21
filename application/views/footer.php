@@ -6,7 +6,6 @@
         Lungo.init({
             name: 'Kitchen Sink',
             version: '2.1.0222',
-            resources: ['assets/menu.html'],
             history: false
         });
 
