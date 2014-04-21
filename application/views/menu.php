@@ -9,22 +9,14 @@
                 <strong>Home Page</strong>
             </li>
 
-            <!-- Layout & Navigation -->
             <li data-view-section="adult_prob">
-                <strong>Adult Clinical Problem List</strong>
+                <strong>List of Clinical Problems</strong>
             </li>
 
-            <!-- List -->
-            <li data-view-section="child_prob">
-                <strong>Children Clinical Problem List</strong>
-            </li>
-
-            <!-- Forms -->
             <li data-view-section="my_notes" data-async="start/my_notes">
-                <strong>My Comments</strong>
+                <strong>My Notes</strong>
             </li>
 
-            <!-- Asides -->
             <li data-view-section="general_info">
                 <strong>General Information</strong>
             </li>

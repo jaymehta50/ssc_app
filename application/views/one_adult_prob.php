@@ -11,8 +11,9 @@
 
         <article id="one_adult_prob" class="list scroll active">
             <div class="indented"><ul>
-                <li><p>These are the subgroups of problems associated with:</p><div style="font-style:italic;text-align:center;margin:9px 0 10px 0;"><p><?php echo $problem_name['clinical_problem']; ?></p></div>
-                <p>Click on one to see the condition(s) associated with it!</p></li>
+                <li><div style="text-align:center;margin:9px 0 10px 0;"><strong><?php echo $problem_name['clinical_problem']; ?></strong></div>
+                <p>Below are the sub-groups of problems associated with <?php echo $problem_name['clinical_problem']; ?></p>
+                <p>Go back to see the Problem List, or click on an option below to see the condition(s) associated with each problem.</p></li>
             </ul></div>
             <div class="indenteds"><ul>
                 <?php
@@ -39,7 +40,8 @@
         if(($_COOKIE['devwidth'] - 42) <= (strlen($problem_name['clinical_problem'].': '.$value['subprob']) * $av_char_width)) echo "<marquee behavior='alternate' scrollamount='2' style='padding-right:7px;'>".$problem_name['clinical_problem'].': '.$value['subprob']."</marquee>";
         else echo $problem_name['clinical_problem'].': '.$value['subprob'];
         echo '</header><article id="subprob_'.$value['subprob_no'].'" class="list scroll active"><div class="indented"><ul>
-                <li><p>These are the conditions associated with:</p><div style="font-style:italic;text-align:center;margin:9px 0 10px 0;"><p>'.$problem_name['clinical_problem'].': '.$value['subprob'].'</p></div>
+                <li><div style="font-style:italic;text-align:center;margin:9px 0 10px 0;"><strong>'.$problem_name['clinical_problem'].': '.$value['subprob'].'</strong>
+                <p>These are the conditions associated with the problem: '.$problem_name['clinical_problem'].': '.$value['subprob'].'</p></div>
                 <p>Click on a condition to see when in the course it appears and to make notes on it!</p></li>
             </ul></div><div class="intendeds"><ul>';
             foreach($one_adult_prob as $value2)

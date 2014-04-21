@@ -18,8 +18,9 @@
         <article id="course_progress" class="list indented scroll active">
             <ul>
                 <li>
-                    <p>You are currently looking at:</p><div style="font-style:italic;text-align:center;margin:9px 0 10px 0;"><p><?php echo $condition['condition']; ?></p></div>
-                    <p>You can review when in the course you would be expected to learn about this condition, add your own notes, and see where else in the Problem List this condition appears.</p>
+                    <div style="text-align:center;margin:9px 0 10px 0;"><strong><?php echo $condition['condition']; ?></strong></div>
+                    <p>You are currently looking at the condition: <?php echo $condition['condition']." - ".$condition['clinical_problem']." ".$condition['problem_subgroup']; ?></p>
+                    <p>You can review when in the course you would be expected to learn about this condition, add your own notes and review any existing notes on this condition.</p>
                 </li>
                 <li>
                     <h2>Course Progress</h2>
@@ -182,8 +183,9 @@
         <article id="add_note" class="list indented scroll">
             <ul>
                 <li>
-                    <p>You are currently looking at:</p><div style="font-style:italic;text-align:center;margin:9px 0 10px 0;"><p><?php echo $condition['condition']; ?></p></div>
-                    <p>You can add your own notes below:</p>
+                    <div style="text-align:center;margin:9px 0 10px 0;"><strong><?php echo $condition['condition']; ?></strong></div>
+                    <p>You are currently looking at the condition: <?php echo $condition['condition']." - ".$condition['clinical_problem']." ".$condition['problem_subgroup']; ?></p>
+                    <p>You can review when in the course you would be expected to learn about this condition, add your own notes and review any existing notes on this condition.</p>
                 </li>
                 <li>
                     <h2>Add a Note</h2>
@@ -202,12 +204,10 @@
             <div id="my_notes_<?php echo $condition['id']; ?>">
                 <ul id="list_my_notes_<?php echo $condition['id']; ?>">
                     <li>
-                        <p>You are currently looking at your notes on:</p>
-                        <div style="font-style:italic;text-align:center;margin:9px 0 10px 0;">
-                            <p><?php echo $condition['condition']; ?></p>
-                        </div>
-                        <p>You can also see your notes for conditions with the same name below:</p>
-                    </li>
+                    <div style="text-align:center;margin:9px 0 10px 0;"><strong><?php echo $condition['condition']; ?></strong></div>
+                    <p>You are currently looking at the condition: <?php echo $condition['condition']." - ".$condition['clinical_problem']." ".$condition['problem_subgroup']; ?></p>
+                    <p>You can review when in the course you would be expected to learn about this condition, add your own notes and review any existing notes on this condition.</p>
+                </li>
                     <li>
                         <h2>My Notes</h2>
                     </li>
