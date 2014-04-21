@@ -207,6 +207,8 @@
                             <p><?php echo $condition['condition']; ?></p>
                         </div>
                         <p>You can also see your notes for conditions with the same name below:</p>
+                    </li>
+                    <li>
                         <h2>My Notes</h2>
                     </li>
                     <?php
