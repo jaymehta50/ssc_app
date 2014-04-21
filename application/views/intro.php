@@ -9,11 +9,11 @@
             </nav>
         </header>
 
-        <article id="intro-article" class="list indenteds scroll">
+        <article id="intro-article" class="list indenteds scroll active">
             <ul>
-                <h4>
+                <li><p>
                     Welcome to the in-development app for the Cambridge Clinical Medicine Problem List!
-                </h4>
+                </p></li>
                 <li>
                     <strong class="text bold">How to Use This App</strong>
                     <p class="text">
@@ -31,13 +31,9 @@
                 </li>
                 <li>
                     <strong class="text bold">Future Plans</strong>
-                    <p class="text">
-                        <ol>
-                            <li>Add the ability to edit and delete existing notes</li>
-                            <li>Create the General Info page</li>
-                            <li>Generally improve layout and speed of loading</li>
-                        </ol>
-                    </p>
+                            <p>Add the ability to edit and delete existing notes</p>
+                            <p>Create the General Info page</p>
+                            <p>Generally improve layout and speed of loading</p>
                 </li>
                 <li>
                     <strong class="text bold">Course Timings</strong>
