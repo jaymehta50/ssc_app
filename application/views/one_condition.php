@@ -221,7 +221,7 @@
                             {
                                 echo "<li id='cond_mynote_".$value['id']."'><div class='my_note'><p>".html_entity_decode($value['note'])."</p><br />
                                 <a href='#' class='button small' data-label='Edit' data-icon='pencil'></a>
-                                <a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote(\"".$value['id']."\")'></a></div>
+                                <a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote(".$value['id'].")'></a></div>
                                 </li>";
                             }
                         }
