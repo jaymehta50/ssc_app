@@ -16,7 +16,7 @@
             var url = "start/addnote";
             var data = {id: a, newnote: document.getElementById("newnote").value};
             
-            Lungo.Service.post(url, data, showResponse(result), "text");
+            Lungo.Service.post(url, data, showResponse, "text");
 
             var div=document.createElement("DIV");
             div.className = "my_note";
