@@ -40,7 +40,7 @@
             loadXMLDoc(url,params,function(){
                 if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
                 {
-                    alert(ajaxdocthing.responseText);
+                    //alert(ajaxdocthing.responseText);
                 }
             });
 
@@ -54,6 +54,24 @@
 
             document.getElementById("newnote").value = "";
             Lungo.Router.article("adult_condition_"+a, "my_notes");
+        }
+
+        function removeNote(b) {
+            var r=confirm("Are you sure that you want to delete this note?");
+            if (r==true) {
+                var url = "start/removenote";
+                var params = "id="+b;
+
+                loadXMLDoc(url,params,function(){
+                    if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
+                    {
+                        alert(ajaxdocthing.responseText);
+                    }
+                });
+
+                var elem = document.getElementById('cond_mynote_'+b);
+                elem.parentNode.removeChild(elem);
+            }
         }
 
         /*

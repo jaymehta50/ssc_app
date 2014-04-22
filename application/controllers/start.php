@@ -54,6 +54,7 @@ class Start extends CI_Controller {
 	public function removenote()
 	{
 		$this->problems_model->removenote($this->input->post('id'));
+		echo "Done!";
 	}
 }
 
