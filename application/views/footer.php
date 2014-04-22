@@ -13,16 +13,34 @@
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         document.cookie = "devwidth="+width+"; path=/;";
 
-        function showResponse(result)
+        var ajaxdocthing;
+        function loadXMLDoc(url,params,cfunc)
         {
-            alert(result.responseText);
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                ajaxdocthing=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                ajaxdocthing=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            ajaxdocthing.onreadystatechange=cfunc;
+            ajaxdocthing.open("POST",url,true);
+            ajaxdocthing.send(params);
         }
 
         function saveNote(a) {
             var url = "start/addnote";
-            var data = {id: a, newnote: document.getElementById("newnote").value};
+            var params = "id="+a+"&newnote="+encodeURIComponent(document.getElementById("newnote").value);
+            loadXMLDoc(url,params,function(){
+                if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
+                {
+                    alert(ajaxdocthing.responseText);
+                }
+            });
             
-            Lungo.Service.post(url, data, showResponse, "text");
+            //var data = {id: a, newnote: document.getElementById("newnote").value};
+            //Lungo.Service.post(url, data, showResponse, "text");
 
             var div=document.createElement("DIV");
             div.className = "my_note";
