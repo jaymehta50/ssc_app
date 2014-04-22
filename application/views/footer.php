@@ -8,9 +8,15 @@
             version: '2.1.0222',
             history: false
         });
+        Lungo.Service.Settings.async = true;
 
         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
         document.cookie = "devwidth="+width+"; path=/;";
+
+        function showResponse(result)
+        {
+            alert(result.responseText);
+        }
 
         function saveNote(a) {
             var url = "start/addnote";
@@ -27,11 +33,6 @@
             document.getElementById("no_notes_here_"+a).style.display="none";
 
             Lungo.Router.article("adult_condition_"+a, "my_notes");
-        }
-
-        function showResponse(result)
-        {
-            alert(result.responseText);
         }
 
         /*
