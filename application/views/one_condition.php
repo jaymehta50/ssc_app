@@ -220,6 +220,7 @@
                             foreach($notes as $value)
                             {
                                 echo "<li><div class='my_note'><p>".html_entity_decode($value['note'])."</p>
+                                <a href='#' class='button' data-label='Edit' data-icon='pencil'></a>
                                 <a href='#' class='button cancel on-right' data-label='Delete' data-icon='remove'></a></div>
                                 </li>";
                             }
