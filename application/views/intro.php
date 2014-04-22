@@ -13,7 +13,7 @@
             <div class="indented">
             <ul>
                 <li>
-                    <h3 class="center bold">Clinical Problems and Conditions App</h3>
+                    <div style="text-align:center;margin:9px 0 10px 0;"><h3 class="center bold">Clinical Problems and Conditions App</h3></div>
                     <p>Welcome to the in-development app for the Problem List!</p>
                 </li>
             </ul>
@@ -22,8 +22,6 @@
             <ul>
                 <li>
                     <strong class="text bold">How to Use This App</strong>
-                </li>
-                <li>
                     <p class="text">
                         Firstly - you can access the menu for this app by clicking on the Menu icon in the top-left of this page.
                     </p>

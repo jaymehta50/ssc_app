@@ -1,7 +1,7 @@
 <section id="my_notes" data-transition="slide" data-aside="features" class="drag">
         <header>
             <nav>
-                <a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a>
+                <a href="#" data-view-aside="features" data-icon="menu"></a>
             </nav>
             My Notes
         </header>
