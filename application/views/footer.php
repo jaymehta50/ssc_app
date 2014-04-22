@@ -26,6 +26,9 @@
             }
             ajaxdocthing.onreadystatechange=cfunc;
             ajaxdocthing.open("POST",url,true);
+            ajaxdocthing.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            ajaxdocthing.setRequestHeader("Content-length", params.length);
+            ajaxdocthing.setRequestHeader("Connection", "close");
             ajaxdocthing.send(params);
         }
 
