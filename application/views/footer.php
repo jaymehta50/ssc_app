@@ -56,7 +56,7 @@
             Lungo.Router.article("adult_condition_"+a, "my_notes");
         }
 
-        function removeNote(b) {
+        function removeNote(b,c) {
             var r=confirm("Are you sure that you want to delete this note?");
             if (r==true) {
                 var url = "start/removenote";
@@ -65,11 +65,16 @@
                 loadXMLDoc(url,params,function(){
                     if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
                     {
-                        alert(ajaxdocthing.responseText);
+                        //alert(ajaxdocthing.responseText);
                     }
                 });
 
-                var elem = document.getElementById('cond_mynote_'+b);
+                if (c==1) {
+                    var elem = document.getElementById('cond_mynote_'+b);
+                }
+                else {
+                    var elem = document.getElementById('me_mynote_'+b);
+                }
                 elem.parentNode.removeChild(elem);
             }
         }

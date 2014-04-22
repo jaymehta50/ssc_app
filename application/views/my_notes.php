@@ -26,7 +26,10 @@
                             echo "<li class='anchor contrast'></li>
                             <a href='#' data-view-section='adult_condition_".$note['condition_id']."' data-async='start/adult_condition/".$note['condition_id']."''><li class='selectable arrow'><strong class='text bold'>".$condition_names[$note['condition_id']]."</strong></li></a>";
                         }
-                        echo "<li><p class='text'>".html_entity_decode($note['note'])."</p></li>";
+                        echo "<li id='me_mynote_".$note['id']."'><div class='my_note'><p class='text'>".html_entity_decode($note['note'])."</p><br />
+                                <a href='#' class='button small' data-label='Edit' data-icon='pencil'></a>
+                                <a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote(".$note['id'].",2)'></a></div>
+                                </li>";
                         $prev_id = $note['condition_id'];
                     }
                 }
