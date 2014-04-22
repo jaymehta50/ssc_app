@@ -45,7 +45,7 @@
                     <p class='text'>2. As a  ‘map’ to review  how one’s learning is progressing – ‘which of these problems have I seen or learned about and which do  I need to address to cover the gaps?’</p>
                 </li>
                 <li>
-                    <strong class='text bold'>Some comments about the list</strong>
+                    <strong class='text bold'>Some comments about the list</strong><br />
                     <p class='text'>1. It is worth reviewing the full list of problems to develop an idea of how the list looks overall.</p><br />
                     <p class='text'>2. Some of the ‘Clinical problems’ are not really things that a patient would bring to a doctor, e.g. ‘abnormal biochemistry’. Some editorial licence has been needed to include categories such as these, but they follow the principle that such problems do come to a clinician’s attention and have associated conditions as their cause.</p><br />
                     <p class='text'>3. ‘Pain’ is difficult to categorise. We have taken a decision to label most pains by the location where they are experienced. A few are grouped together under ‘Regional pain’.</p><br />

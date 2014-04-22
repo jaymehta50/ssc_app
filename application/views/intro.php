@@ -21,7 +21,7 @@
             <div class="indenteds">
             <ul>
                 <li>
-                    <strong class="text bold">How to Use This App</strong>
+                    <strong class="text bold">How to Use This App</strong><br />
                     <p class="text">
                         Firstly - you can access the menu for this app by clicking on the Menu icon in the top-left of this page.
                     </p>
