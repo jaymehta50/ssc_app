@@ -51,6 +51,7 @@ class Problems_model extends CI_Model {
 
 	public function getnotes($condition_id, $user)
 	{
+		$this->db->where('visible', 1);
 		$this->db->where('user', $user);
 		if($condition_id) $this->db->where('condition_id', $condition_id);
 		$this->db->order_by('condition_id','asc');
@@ -88,6 +89,12 @@ class Problems_model extends CI_Model {
 			);
 		$this->db->insert('notes', $data);
 		return $this->db->insert_id();
+	}
+
+	public function removenote($note_id)
+	{
+		$this->db->where('id', $note_id);
+		$this->db->update('notes', array("visible" => 0));
 	}
 
 /*

@@ -30,17 +30,16 @@
         }
 
         function saveNote(a) {
+            document.getElementById("newnote").blur();
             var url = "start/addnote";
             var params = "id="+a+"&newnote="+encodeURIComponent(document.getElementById("newnote").value);
+
             loadXMLDoc(url,params,function(){
                 if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
                 {
                     alert(ajaxdocthing.responseText);
                 }
             });
-            
-            //var data = {id: a, newnote: document.getElementById("newnote").value};
-            //Lungo.Service.post(url, data, showResponse, "text");
 
             var div=document.createElement("DIV");
             div.className = "my_note";
@@ -50,6 +49,7 @@
             document.getElementById("list_my_notes_"+a).appendChild(list);
             document.getElementById("no_notes_here_"+a).style.display="none";
 
+            document.getElementById("newnote").value = "";
             Lungo.Router.article("adult_condition_"+a, "my_notes");
         }
 
