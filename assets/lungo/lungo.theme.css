@@ -138,12 +138,12 @@ section .list li a.theme.arrow::after {
 }
 section .list li small,
 section .list li a small,
-section .list li .on-right:not(.tag),
+section .list li .on-right:not(.tag,.button),
 section .list li a .on-right:not(.tag) {
   color: #808080;
 }
-section .list li .on-right,
-section .list li a .on-right {
+section .list li .on-right:not(.button),
+section .list li a .on-right:not(.button) {
   font-weight: 400;
 }
 section .list li:not(.big) img {
