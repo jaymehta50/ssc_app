@@ -58,7 +58,7 @@ td.green {background-color:#33FF33;}
 .list li.arrow::after{position:absolute;right:.5em;top:45%;width:.5em;height:.5em;content:'';border-right:.25em solid;border-top:.25em solid;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}
 .list li.arrow{padding-right: 23px;}
 .list li a:not(.button){display:block;text-decoration:none}
-.list li .icon:not(.button>.icon){display:inline-block;float:left;margin-right:.4em;text-align:center;line-height:1em;width:24px;height:24px;font-size:1.4em}
+.list li .icon:not(.button .icon){display:inline-block;float:left;margin-right:.4em;text-align:center;line-height:1em;width:24px;height:24px;font-size:1.4em}
 .list li.anchor{padding:.25em .5em;}
 .list li.anchor .tag{display:none}
 .list li h1,.list li h2,.list li h3,.list li h4,.list li h5,.list li h6,.list li strong,.list li small{overflow:visible;white-space:normal;text-overflow:initial;display:block}
