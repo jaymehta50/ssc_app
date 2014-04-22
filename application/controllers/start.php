@@ -48,8 +48,7 @@ class Start extends CI_Controller {
 
 	public function addnote()
 	{
-		echo $this->input->post('id')." ".$this->input->post('newnote');
-		//echo $this->problems_model->addnote($this->input->post('id'), $this->input->post('newnote'), $_SERVER['REMOTE_USER']);
+		echo $this->problems_model->addnote($this->input->post('id'), $this->input->post('newnote'), $_SERVER['REMOTE_USER']);
 	}
 
 	public function removenote()

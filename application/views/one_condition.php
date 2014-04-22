@@ -219,7 +219,9 @@
                         {
                             foreach($notes as $value)
                             {
-                                echo "<li><div class='my_note'><p>".html_entity_decode($value['note'])."</p></div></li>";
+                                echo "<li><div class='my_note'><p>".html_entity_decode($value['note'])."</p></div>
+                                <a href='#' class='button cancel' data-label='Delete'><span class='icon remove'></span></a>
+                                </li>";
                             }
                         }
                         ?>
