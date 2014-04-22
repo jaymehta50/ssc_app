@@ -16,7 +16,7 @@
             var url = "start/addnote";
             var data = {id: a, newnote: document.getElementById("newnote").value};
             
-            Lungo.Service.post(url, data, null, "text");
+            Lungo.Service.post(url, data, showResponse(result), "text");
 
             var div=document.createElement("DIV");
             div.className = "my_note";
@@ -29,7 +29,10 @@
             Lungo.Router.article("adult_condition_"+a, "my_notes");
         }
 
-
+        function showResponse(result)
+        {
+            alert(result.responseText);
+        }
 
         /*
         function myheaderresize() {
