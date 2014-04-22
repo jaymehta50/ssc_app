@@ -9,26 +9,41 @@
             </nav>
         </header>
 
-        <article id="intro-article" class="list indented scroll active">
+        <article id="intro-article" class="list scroll active">
+            <div class="indented">
             <ul>
-                <li><p>
-                    Welcome to the in-development app for the Cambridge Clinical Medicine Problem List!
-                </p></li>
+                <li>
+                    <h3 class="center bold">Clinical Problems and Conditions App</h3>
+                    <p>Welcome to the in-development app for the Problem List!</p>
+                </li>
+            </ul>
+            </div>
+            <div class="indenteds">
+            <ul>
                 <li>
                     <strong class="text bold">How to Use This App</strong>
+                </li>
+                <li>
                     <p class="text">
-                        Firstly - you can access the menu for this app by clicking on the Menu icon (<span class="icon menu"></span>) in the top-left of this page.
-                    </p><br />
+                        Firstly - you can access the menu for this app by clicking on the Menu icon in the top-left of this page.
+                    </p>
+                </li>
+                <li>
                     <p class="text">
-                        From this menu you can choose between looking at the Problem List, your Own Notes or General Info about the Clinical Problems and Conditions list.
-                    </p><br />
+                        From this menu you can choose between looking at the Problem List, your Own Notes or General Info.
+                    </p>
+                </li>
+                <li>
                     <p class="text">
-                        Clicking on "List of Clinical Problems" will show you all of the major problems in the Problem List (sub-divided into 3 pages - use the links at the bottom!). From here you can click on any problem to see how it is subdivided into subgroups, and clicking on a subgroup will show the conditions associated with that problem.
-                    </p><br />
+                        Clicking on "List of Clinical Problems" will show you all of the major problems in the Problem List (sub-divided into 3 pages). From here you can click on any problem to see how it is subdivided into subgroups, and clicking on a subgroup will show the conditions associated with that problem.
+                    </p>
+                </li>
+                <li>
                     <p class="text">
                         You can then click on any condition, which will show you when in the course you are likely to see a patient presenting with this condition. You will also be able to add your own notes to that condition, and review any previously made notes.
                     </p>
                 </li>
+                <li class='anchor contrast'></li>
                 <li>
                     <strong class="text bold">Future Plans</strong>
                             <p>Add the ability to edit and delete existing notes.</p>
@@ -43,5 +58,6 @@
                 </li>*/
                 ?>
             </ul>
+            </div>
         </article>
     </section>
