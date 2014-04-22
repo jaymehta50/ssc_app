@@ -164,15 +164,15 @@ body > section > article.splash .copyright{position:absolute;width:100%;bottom:8
 .button,button{display:inline-block;border:none;cursor:pointer;font-family:inherit;font-weight:inherit;text-align:center;text-decoration:none;outline:none;background:none;font-size:inherit;}
 header .button > abbr,header button > abbr{font-size:.9em}
 header .button .icon + abbr,header button .icon + abbr{position:relative;left:.3em;top:.5em;float:right}
-article .button,article button{line-height:2.5em;}
-article .button.icon,article button.icon{padding:0 .65em}
-article .button:not(.icon),article button:not(.icon){padding:0 1em;}
-article .button:not(.icon) .icon + abbr,article button:not(.icon) .icon + abbr{margin-left:.5em}
-article .button.large,article button.large{font-size:1.4em}
-article .button.small,article button.small{font-size:.9em;line-height:2.25em}
-article .button.tiny,article button.tiny{font-size:11px;line-height:2em;padding:0 .6em}
-article .button.anchor,article button.anchor{width:100%;position:relative;padding:0;}
-article .button.anchor:not(.icon) .icon,article button.anchor:not(.icon) .icon{position:absolute;left:1em}
+.button,button{line-height:2.5em;}
+.button.icon,button.icon{padding:0 .65em}
+.button:not(.icon),button:not(.icon){padding:0 1em;}
+.button:not(.icon) .icon + abbr,button:not(.icon) .icon + abbr{margin-left:.5em}
+.button.large,button.large{font-size:1.4em}
+.button.small,button.small{font-size:.9em;line-height:2.25em}
+.button.tiny,button.tiny{font-size:11px;line-height:2em;padding:0 .6em}
+.button.anchor,button.anchor{width:100%;position:relative;padding:0;}
+.button.anchor:not(.icon) .icon,button.anchor:not(.icon) .icon{position:absolute;left:1em}
 
 body > section > article > .empty{display:block;width:80%;margin:0 auto;padding-top:15%;text-align:center;}
 body > section > article > .empty > *{display:block}
