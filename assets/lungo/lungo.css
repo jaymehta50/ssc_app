@@ -59,12 +59,13 @@ td.green {background-color:#33FF33;}
 .list li.arrow{padding-right: 23px;}
 .list li a:not(.button){display:block;text-decoration:none}
 .list li .icon{display:inline-block;float:left;margin-right:.4em;text-align:center;line-height:1em;width:24px;height:24px;font-size:1.4em}
+.list li a.button > .icon{display:inline-block;}
 .list li.anchor{padding:.25em .5em;}
 .list li.anchor .tag{display:none}
 .list li h1,.list li h2,.list li h3,.list li h4,.list li h5,.list li h6,.list li strong,.list li small{overflow:visible;white-space:normal;text-overflow:initial;display:block}
 .list li small + .on-right{margin-left:0;margin-top:-1.4em}
 .list li small,.list li.anchor{font-size:.9em}
-.list li .on-right:not(.tag){font-size:11px}
+.list li .on-right:not(.tag,.button){font-size:11px}
 .list li .on-right.tag{padding-left:.4em;padding-right:.4em;-webkit-text-shadow:none;-moz-text-shadow:none;-ms-text-shadow:none;-o-text-shadow:none;text-shadow:none}
 .list .on-right .icon,.list small .icon{font-size:inherit !important;width:auto !important;height:auto !important}
 .list.indented li:not(:last-child){margin-bottom:.8em}
