@@ -59,7 +59,7 @@ class Start extends CI_Controller {
 
 	public function editnote()
 	{
-		$this->problems_model->removenote($this->input->post('id'), $this->input->post('note'));
+		$this->problems_model->editnote($this->input->post('id'), $this->input->post('note'));
 		echo nl2br($this->input->post('note'));
 	}
 }
