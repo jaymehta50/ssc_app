@@ -55,6 +55,12 @@ class Start extends CI_Controller {
 	{
 		$this->problems_model->removenote($this->input->post('id'));
 	}
+
+	public function editnote()
+	{
+		$this->problems_model->removenote($this->input->post('id'), $this->input->post('note'));
+		echo "Woop!";
+	}
 }
 
 /* End of file welcome.php */

@@ -97,6 +97,12 @@ class Problems_model extends CI_Model {
 		$this->db->update('notes', array("visible" => 0));
 	}
 
+	public function editnote($note_id,$text)
+	{
+		$this->db->where('id', $note_id);
+		$this->db->update('notes', array("note" => htmlentities(nl2br($text), ENT_QUOTES)));
+	}
+
 /*
 	public function getcondition($id = null)
 	{

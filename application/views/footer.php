@@ -32,6 +32,10 @@
             ajaxdocthing.send(params);
         }
 
+        function br2nl(str) {
+            return str.replace(/<br\s*\/?>/mg,"\n");
+        }
+
         function saveNote(a) {
             document.getElementById("newnote").blur();
             var url = "start/addnote";
@@ -54,6 +58,37 @@
 
             document.getElementById("newnote").value = "";
             Lungo.Router.article("adult_condition_"+a, "my_notes");
+        }
+
+        function editNote(a) {
+            document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a).value);
+            document.getElementById("edit_note_id").value = a;
+            Lungo.Router.article("edit_note", "edit_note");
+        }
+
+        function saveEditNote() {
+            document.getElementById("edit_note_textarea").blur();
+            var url = "start/editnote";
+            var a = document.getElementById("edit_note_id").value;
+            var params = "id="+a+"&note="+encodeURIComponent(document.getElementById("edit_note_textarea").value);
+            loadXMLDoc(url,params,function(){
+                if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
+                {
+                    alert(ajaxdocthing.responseText);
+                }
+            });
+
+            if (document.contains(document.getElementById("cond_note_text_"+a))) {
+                document.getElementById("cond_note_text_"+a).value = document.getElementById("edit_note_textarea").value;
+            }
+
+            if (document.contains(document.getElementById("my_note_"+a))) {
+                document.getElementById("my_note_"+a).value = document.getElementById("edit_note_textarea").value;
+            }
+
+            document.getElementById("edit_note_textarea").value = "";
+            document.getElementById("edit_note_id").value = "";
+            Lungo.Router.back();
         }
 
         function removeNote(b,c) {
