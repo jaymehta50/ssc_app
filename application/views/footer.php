@@ -33,7 +33,7 @@
         }
 
         function br2nl(str) {
-            return str.replace(/<br\s*\/?>/mg,"\n");
+            return str.replace(/<br\s*\/?>/mg,"\r\n");
         }
 
         function saveNote(a) {
@@ -61,7 +61,7 @@
         }
 
         function editNote(a) {
-            document.getElementById("edit_note_textarea").value = document.getElementById("cond_note_text_"+a).value;
+            document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a).value);
             document.getElementById("edit_note_id").value = a;
             Lungo.Router.article("edit_note", "edit_note");
         }

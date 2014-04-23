@@ -18,6 +18,7 @@ class Start extends CI_Controller {
 		$this->load->view('intro',$data);
 		$this->load->view('adult_prob',$data);
 		$this->load->view('general_info',$data);
+		$this->load->view('edit_note',$data);
 		$this->load->view('menu',$data);
 		$this->load->view('footer',$data);
 	}
