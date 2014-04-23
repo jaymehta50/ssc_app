@@ -59,7 +59,7 @@ td.green {background-color:#33FF33;}
 .list li.arrow{padding-right: 23px;}
 .list li a:not(.button){display:block;text-decoration:none}
 .list li .icon{display:inline-block;float:left;margin-right:.4em;text-align:center;line-height:1em;width:24px;height:24px;font-size:1.4em}
-.list li a.button > .icon{display:inline-block;float: initial;margin-right: auto;}
+.list li a.button > .icon{display:inline-block;float: initial;margin-right: auto;width: initial;font-size: initial;}
 .list li.anchor{padding:.25em .5em;}
 .list li.anchor .tag{display:none}
 .list li h1,.list li h2,.list li h3,.list li h4,.list li h5,.list li h6,.list li strong,.list li small{overflow:visible;white-space:normal;text-overflow:initial;display:block}
