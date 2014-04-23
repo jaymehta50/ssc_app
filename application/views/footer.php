@@ -60,8 +60,13 @@
             Lungo.Router.article("adult_condition_"+a, "my_notes");
         }
 
-        function editNote(a) {
-            document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a).innerHTML);
+        function editNote(a,o) {
+            if (o==1) {
+                document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a).innerHTML);
+            }
+            else {
+                document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("my_note_"+a).innerHTML);
+            }
             document.getElementById("edit_note_id").value = a;
             Lungo.Router.article("edit_note", "edit_note");
         }
