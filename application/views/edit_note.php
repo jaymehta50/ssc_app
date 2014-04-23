@@ -18,12 +18,11 @@
                     <div class="form">
                         <fieldset>
                             <textarea id="edit_note_textarea"></textarea>
-                            <input type="hidden" id="edit_note_id" name="edit_note_id" value="" />
-                            <a href='#back' class='button small' data-label='Cancel' data-icon='chevron-left' data-view-section="back"></a>
-                            <a href='#' class='button accept on-right small' data-label='Save Changes' data-icon='check' onclick='saveEditNote()'></a></div>
-                                
+                            <input type="hidden" id="edit_note_id" name="edit_note_id" value="" />                                
                         </fieldset>
                     </div>
+                    <a href='#back' class='button small' data-label='Cancel' data-icon='chevron-left' data-view-section="back"></a>
+                    <a href='#' class='button accept on-right small' data-label='Save Changes' data-icon='check' onclick='saveEditNote()'></a></div>
                 </li>
             </ul>
         </article>
