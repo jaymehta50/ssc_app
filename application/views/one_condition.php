@@ -219,7 +219,8 @@
                         {
                             foreach($notes as $value)
                             {
-                                echo "<li id='cond_mynote_".$value['id']."'><div class='my_note'><p class='text'><div id='cond_note_text_".$value['id']."'>".html_entity_decode($value['note'])."</div></p><br />
+                                echo "<li id='cond_mynote_".$value['id']."'><div class='my_note'><p class='text'>".html_entity_decode($value['note'])."</p><br />
+                                <input type='hidden' name='cond_note_text_".$value['id']."' id='cond_note_text_".$value['id']."' value='".html_entity_decode($value['note'])."' />
                                 <a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote(".$value['id'].")'></a>
                                 <a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote(".$value['id'].",1)'></a></div>
                                 </li>";
