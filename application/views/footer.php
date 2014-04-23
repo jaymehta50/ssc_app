@@ -61,7 +61,7 @@
         }
 
         function editNote(a) {
-            document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a).value);
+            document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a).innerHTML);
             document.getElementById("edit_note_id").value = a;
             Lungo.Router.article("edit_note", "edit_note");
         }
@@ -74,17 +74,17 @@
             loadXMLDoc(url,params,function(){
                 if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
                 {
-                    alert(ajaxdocthing.responseText);
+                    //alert(ajaxdocthing.responseText);
+
+                    if (document.contains(document.getElementById("cond_note_text_"+a))) {
+                        document.getElementById("cond_note_text_"+a).innerHTML = ajaxdocthing.responseText;
+                    }
+
+                    if (document.contains(document.getElementById("my_note_"+a))) {
+                        document.getElementById("my_note_"+a).innerHTML = ajaxdocthing.responseText;
+                    }
                 }
             });
-
-            if (document.contains(document.getElementById("cond_note_text_"+a))) {
-                document.getElementById("cond_note_text_"+a).value = document.getElementById("edit_note_textarea").value;
-            }
-
-            if (document.contains(document.getElementById("my_note_"+a))) {
-                document.getElementById("my_note_"+a).value = document.getElementById("edit_note_textarea").value;
-            }
 
             document.getElementById("edit_note_textarea").value = "";
             document.getElementById("edit_note_id").value = "";
