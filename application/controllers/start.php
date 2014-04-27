@@ -5,10 +5,14 @@ class Start extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		if(!isset($_SERVER['REMOTE_USER'])) header("Location: http://jkm50.user.srcf.net/ssc_app/login/");
 		$this->load->helper('url');
 		$this->load->model('problems_model');
 		$this->av_char_width = 7;
+	}
+
+	public function test()
+	{
+		echo $_SERVER['REMOTE_USER'];
 	}
 
 	public function index()
