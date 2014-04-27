@@ -8,11 +8,12 @@ class Start extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('problems_model');
 		$this->av_char_width = 7;
+		$this->load->library('session');
 	}
 
 	public function test()
 	{
-		echo $_SERVER['REMOTE_USER'];
+		echo $this->session->userdata('crsid');
 	}
 
 	public function index()
