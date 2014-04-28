@@ -19,3 +19,6 @@
  
   ErrorDocument 404 /index.php
 </IfModule>
+
+AuthType Ucam-WebAuth
+Require valid-user
