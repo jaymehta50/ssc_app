@@ -30,10 +30,6 @@
             ajaxdocthing.send(params);
         }
 
-        function br2nl(str) {
-            return str.replace(/<br\s*\/?>/mg,"\r\n");
-        }
-
         function saveNote(a) {
             document.getElementById("newnote"+a).blur();
             var url = "start/addnote";
@@ -44,13 +40,13 @@
                 {
                     var newid = ajaxdocthing.responseText;
                     var ul = document.getElementById("list_my_notes_"+a);
-                    var newhtml = "<li id='cond_mynote_"+newid+"'><div class='my_note'><p class='text' id='cond_note_text_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+",1)'><span class='icon pencil'></span><abbr>Edit</abbr></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+",1)'><span class='icon remove'></span><abbr>Delete</abbr></a></div></li>";
+                    var newhtml = "<li id='cond_mynote_"+newid+"'><div class='my_note'><p class='text' id='cond_note_text_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+")'><span class='icon pencil'></span><abbr>Edit</abbr></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+")'><span class='icon remove'></span><abbr>Delete</abbr></a></div></li>";
                     ul.innerHTML = ul.innerHTML + newhtml;
                     document.getElementById("no_notes_here_"+a).style.display="none";
 
                     document.getElementById("mynotes_li_nonotes").style.display="none";
                     var ul2 = document.getElementById("mynotes_ul");
-                    var newhtml2 = "<li id='me_mynote_"+newid+"'><div class='my_note'><p class='text' id='my_note_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+",2)'><span class='icon pencil'></span><abbr>Edit</abbr></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+",2)'><span class='icon remove'></span><abbr>Delete</abbr></a></div></li>";
+                    var newhtml2 = "<li id='me_mynote_"+newid+"'><div class='my_note'><p class='text' id='my_note_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+")'><span class='icon pencil'></span><abbr>Edit</abbr></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+")'><span class='icon remove'></span><abbr>Delete</abbr></a></div></li>";
                     ul2.innerHTML = ul2.innerHTML + newhtml2;
                     Lungo.Router.article("condition_"+a, "cond_my_notes_"+a);
                 }
@@ -67,13 +63,8 @@
 
         }
 
-        function editNote(a,o) {
-            if (o==1) {
-                document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a).innerHTML);
-            }
-            else {
-                document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("my_note_"+a).innerHTML);
-            }
+        function editNote(a) {
+            document.getElementById("edit_note_textarea").value = document.getElementById("my_note_"+a).innerHTML.replace(/<br\s*\/?>/mg,"\r\n");
             document.getElementById("edit_note_id").value = a;
             Lungo.Router.article("edit_note", "edit_note");
         }
@@ -86,19 +77,21 @@
             loadXMLDoc(url,params,function(){
                 if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
                 {
-                    if (document.contains(document.getElementById("cond_note_text_"+a))) {
-                        document.getElementById("cond_note_text_"+a).innerHTML = ajaxdocthing.responseText;
-                    }
-                    document.getElementById("my_note_"+a).innerHTML = ajaxdocthing.responseText;
+                    //Nothing
                 }
             });
+
+            if (document.contains(document.getElementById("cond_note_text_"+a))) {
+                document.getElementById("cond_note_text_"+a).innerHTML = document.getElementById("edit_note_textarea").value.replace(/\r?\n/g, '<br />');
+            }
+            document.getElementById("my_note_"+a).innerHTML = document.getElementById("edit_note_textarea").value.replace(/\r?\n/g, '<br />');
 
             document.getElementById("edit_note_textarea").value = "";
             document.getElementById("edit_note_id").value = "";
             Lungo.Router.back();
         }
 
-        function removeNote(b,c) {
+        function removeNote(b) {
             var r=confirm("Are you sure that you want to delete this note?");
             if (r==true) {
                 var url = "start/removenote";
