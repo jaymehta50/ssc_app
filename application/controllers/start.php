@@ -11,11 +11,6 @@ class Start extends CI_Controller {
 		$this->load->library('session');
 	}
 
-	public function test()
-	{
-		echo $this->session->userdata('crsid');
-	}
-
 	public function index()
 	{
 		$data['base_url'] = base_url();
