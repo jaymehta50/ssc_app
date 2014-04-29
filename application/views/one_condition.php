@@ -10,12 +10,12 @@
         </header>
 
         <nav data-control="groupbar">
-            <a href="#" data-view-article="course_progress" data-label="Course Progress" class="active"></a>
-            <a href="#" data-view-article="add_note" data-label="Add New Note"></a>
-            <a href="#" data-view-article="cond_my_notes" data-label="My Notes"></a>
+            <a href="#" data-view-article="course_progress_<?php echo $condition['id']; ?>" data-label="Course Progress" class="active"></a>
+            <a href="#" data-view-article="add_note_<?php echo $condition['id']; ?>" data-label="Add New Note"></a>
+            <a href="#" data-view-article="cond_my_notes_<?php echo $condition['id']; ?>" data-label="My Notes"></a>
         </nav>
 
-        <article id="course_progress" class="list indented scroll active">
+        <article id="course_progress_<?php echo $condition['id']; ?>" class="list indented scroll active">
             <ul>
                 <li>
                     <div style="text-align:center;margin:9px 0 10px 0;"><strong class='text bold'><?php echo $condition['condition']; ?></strong></div>
@@ -206,7 +206,7 @@
 
 
 
-        <article id="add_note" class="list indented scroll">
+        <article id="add_note_<?php echo $condition['id']; ?>" class="list indented scroll">
             <ul>
                 <li>
                     <div style="text-align:center;margin:9px 0 10px 0;"><strong class='text bold'><?php echo $condition['condition']; ?></strong></div>
@@ -226,7 +226,7 @@
         </article>
 
 
-        <article id="cond_my_notes" class="list indented scroll">
+        <article id="cond_my_notes_<?php echo $condition['id']; ?>" class="list indented scroll">
             <div id="my_notes_<?php echo $condition['id']; ?>">
                 <ul id="list_my_notes_<?php echo $condition['id']; ?>">
                 <li>
