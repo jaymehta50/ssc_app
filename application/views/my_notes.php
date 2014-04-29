@@ -20,13 +20,13 @@
                     {
                         if($first && $prev_id<>$note['condition_id'])
                         {
-                            echo "<a href='#' data-view-section='adult_condition_".$note['condition_id']."' data-async='start/adult_condition/".$note['condition_id']."''><li class='selectable arrow'><strong class='text bold'>".$condition_names[$note['condition_id']]."</strong></li></a>";
+                            echo "<a href='#' data-view-section='condition_".$note['condition_id']."' data-async='start/condition/".$note['condition_id']."''><li class='selectable arrow'><strong class='text bold'>".$condition_names[$note['condition_id']]."</strong></li></a>";
                             $first = FALSE;
                         }
                         elseif($prev_id<>$note['condition_id'])
                         {
                             echo "<li class='anchor contrast'></li>
-                            <a href='#' data-view-section='adult_condition_".$note['condition_id']."' data-async='start/adult_condition/".$note['condition_id']."''><li class='selectable arrow'><strong class='text bold'>".$condition_names[$note['condition_id']]."</strong></li></a>";
+                            <a href='#' data-view-section='condition_".$note['condition_id']."' data-async='start/condition/".$note['condition_id']."''><li class='selectable arrow'><strong class='text bold'>".$condition_names[$note['condition_id']]."</strong></li></a>";
                         }
                         echo "<li id='me_mynote_".$note['id']."'><div class='my_note'><p class='text' id='my_note_".$note['id']."'>".html_entity_decode($note['note'])."</p><br />
                                 <a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote(".$note['id'].",2)'></a>
