@@ -20,6 +20,7 @@ class Problems_model extends CI_Model {
 
 	public function getadultprobnames()
 	{
+		$this->db->where('child', 0);
 		$query = $this->db->get('problem_names_adult');
 		return $query->result_array();
 	}
