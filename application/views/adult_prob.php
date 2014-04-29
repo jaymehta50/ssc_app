@@ -18,7 +18,7 @@
                     {
                         if(!$one_first) $one_first = $value['clinical_problem'][0];
                         $one_last = $value['clinical_problem'][0];
-                        echo '<a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
+                        echo '<a href="#" data-view-section="problem_'.$value['problem_id_adult'].'" data-async="start/problem/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
                     }
                 ?>
             </ul></div>
@@ -35,7 +35,7 @@
                     {
                         if(!$two_first) $two_first = $value['clinical_problem'][0];
                         $two_last = $value['clinical_problem'][0];
-                        echo '<a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
+                        echo '<a href="#" data-view-section="problem_'.$value['problem_id_adult'].'" data-async="start/problem/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
                     }
                 ?>
             </ul></div>
@@ -52,7 +52,7 @@
                     {
                         if(!$three_first) $three_first = $value['clinical_problem'][0];
                         $three_last = $value['clinical_problem'][0];
-                        echo '<a href="#" data-view-section="adult_prob_'.$value['problem_id_adult'].'" data-async="start/adult_prob/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
+                        echo '<a href="#" data-view-section="problem_'.$value['problem_id_adult'].'" data-async="start/problem/'.$value['problem_id_adult'].'"><li class="selectable arrow"><strong>'.$value['clinical_problem'].'</strong></li></a>';
                     }
                 ?>
             </ul></div>

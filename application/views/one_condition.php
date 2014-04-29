@@ -1,4 +1,4 @@
-<section id="adult_condition_<?php echo $condition['id']; ?>" data-transition="slide" data-aside="features" class="drag">
+<section id="condition_<?php echo $condition['id']; ?>" data-transition="slide" data-aside="features" class="drag">
         <header>
             <nav>
                 <a href="#back" data-view-section="back"><span class="icon chevron-left"></span></a>
@@ -33,6 +33,9 @@
                                     else echo "<td class='red'>No</td>";
                                 ?>
                         </tr>
+                    <?php
+                    if($condition['child']==0) {
+                        ?>
                         <tr>
                             <td>Intro Course</td>
                                 <?php
@@ -172,6 +175,29 @@
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>
+                        <?php }
+                        elseif($condition['child']==1) {
+                            ?>
+                        <tr>
+                            <td>Growth and Development (Stage 2)</td>
+                                <?php
+                                    if($condition['growth_dev_2']==4) echo "<td class='blue'>Blue</td>";
+                                    elseif($condition['growth_dev_2']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['growth_dev_2']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
+                                ?>
+                        </tr>
+                        <tr>
+                            <td>General Practice (all stages)</td>
+                                <?php
+                                    if($condition['gp_1_2_3']==4) echo "<td class='blue'>Blue</td>";
+                                    elseif($condition['gp_1_2_3']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['gp_1_2_3']==2) echo "<td class='amber'>Amber</td>";
+                                    else echo "<td class='red'>Red</td>";
+                                ?>
+                        </tr>
+                        <?php }
+                        ?>
                         </tbody>
                     </table>
                 </li>
