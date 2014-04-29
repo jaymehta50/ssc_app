@@ -114,6 +114,7 @@ class Problems_model extends CI_Model {
 		return $query->row_array();
 	}
 
+/*
 	public function getcondition($prob_id)
 	{
 		$this->db->where('id', $prob_id);
@@ -123,6 +124,7 @@ class Problems_model extends CI_Model {
 		$temp['clinical_problem'] = $temp2['clinical_problem'];
 		return $temp;
 	}
+	*/
 
 	public function getchildcondition($prob_id)
 	{
