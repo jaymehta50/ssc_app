@@ -36,8 +36,8 @@
                         <tr>
                             <td>Intro Course</td>
                                 <?php
-                                    if($condition['Core']==3) echo "<td class='green'>Green</td>";
-                                    elseif($condition['Core']==2) echo "<td class='amber'>Amber</td>";
+                                    if($condition['intro_course']==3) echo "<td class='green'>Green</td>";
+                                    elseif($condition['intro_course']==2) echo "<td class='amber'>Amber</td>";
                                     else echo "<td class='red'>Red</td>";
                                 ?>
                         </tr>

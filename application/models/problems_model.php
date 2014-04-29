@@ -26,11 +26,27 @@ class Problems_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function getchildprobnames()
+	{
+		$this->db->where('child', 1);
+		$this->db->order_by('clinical_problem','asc');
+		$query = $this->db->get('problem_names_adult');
+		return $query->result_array();
+	}
+
 	public function getoneadultprob($problem)
 	{
 		$this->db->order_by('problem_subgroup','asc');
 		$this->db->where('clinical_problem_id', $problem);
 		$query = $this->db->get('problem_list_adult');
+		return $query->result_array();
+	}
+
+	public function getonechildprob($problem)
+	{
+		$this->db->order_by('problem_subgroup','asc');
+		$this->db->where('clinical_problem_id', $problem);
+		$query = $this->db->get('problem_list_child');
 		return $query->result_array();
 	}
 
@@ -45,6 +61,16 @@ class Problems_model extends CI_Model {
 	{
 		$this->db->where('id', $prob_id);
 		$query = $this->db->get('problem_list_adult');
+		$temp = $query->row_array();
+		$temp2 = $this->getprobnameadult($temp['clinical_problem_id']);
+		$temp['clinical_problem'] = $temp2['clinical_problem'];
+		return $temp;
+	}
+
+	public function getchildcondition($prob_id)
+	{
+		$this->db->where('id', $prob_id);
+		$query = $this->db->get('problem_list_child');
 		$temp = $query->row_array();
 		$temp2 = $this->getprobnameadult($temp['clinical_problem_id']);
 		$temp['clinical_problem'] = $temp2['clinical_problem'];

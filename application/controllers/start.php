@@ -20,9 +20,11 @@ class Start extends CI_Controller {
 	{
 		$data['base_url'] = base_url();
 		$data['adult_probs'] = $this->problems_model->getadultprobnames();
+		$data['child_probs'] = $this->problems_model->getchildprobnames();
 		$this->load->view('header',$data);
 		$this->load->view('intro',$data);
 		$this->load->view('adult_prob',$data);
+		$this->load->view('child_prob',$data);
 		$this->load->view('general_info',$data);
 		$this->load->view('edit_note',$data);
 		$this->load->view('menu',$data);
@@ -37,6 +39,14 @@ class Start extends CI_Controller {
 		$this->load->view('one_adult_prob',$data);
 	}
 
+	public function child_prob($problem)
+	{
+		$data['av_char_width'] = $this->av_char_width;
+		$data['one_child_prob'] = $this->problems_model->getonechildprob($problem);
+		$data['problem_name'] = $this->problems_model->getprobnameadult($problem);
+		$this->load->view('one_child_prob',$data);
+	}
+
 	public function adult_condition($prob_id)
 	{
 		$data['av_char_width'] = $this->av_char_width;
@@ -44,6 +54,15 @@ class Start extends CI_Controller {
 		$data['condition'] = $this->problems_model->getcondition($prob_id);
 		$data['notes'] = $this->problems_model->getnotes($prob_id, $_SERVER['REMOTE_USER']);
 		$this->load->view('one_condition',$data);
+	}
+
+	public function child_condition($prob_id)
+	{
+		$data['av_char_width'] = $this->av_char_width;
+		$data['base_url'] = base_url();
+		$data['condition'] = $this->problems_model->getchildcondition($prob_id);
+		$data['notes'] = $this->problems_model->getnotes($prob_id, $_SERVER['REMOTE_USER']);
+		$this->load->view('one_condition_child',$data);
 	}
 
 	public function my_notes()
