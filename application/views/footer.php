@@ -110,14 +110,14 @@
                         //alert(ajaxdocthing.responseText);
                     }
                 });
-
-                if (c==1) {
-                    var elem = document.getElementById('cond_mynote_'+b);
-                }
-                else {
-                    var elem = document.getElementById('me_mynote_'+b);
-                }
+                
+                var elem = document.getElementById('me_mynote_'+b);
                 elem.parentNode.removeChild(elem);
+
+                if (document.contains(document.getElementById('cond_mynote_'+b))) {
+                    elem = document.getElementById('cond_mynote_'+b);
+                    elem.parentNode.removeChild(elem);
+                }
             }
         }
 
