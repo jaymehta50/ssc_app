@@ -55,7 +55,7 @@
             document.getElementById("no_notes_here_"+a).style.display="none";
 
             document.getElementById("newnote").value = "";
-            Lungo.Router.article("adult_condition_"+a, "my_notes");
+            Lungo.Router.article("adult_condition_"+a, "cond_my_notes");
         }
 
         function editNote(a,o) {
