@@ -12,7 +12,7 @@
                 echo "<li id='mynotes_li_nonotes'";
                 if($my_notes) echo " style='display:none;'";
                 echo "><h2>You have not created any notes yet!</h2></li>";
-                else
+                if($my_notes)
                 {
                     $prev_id = "";
                     $first = TRUE;
