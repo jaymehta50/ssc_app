@@ -31,10 +31,7 @@
         }
 
         function saveNote(a) {
-            if(document.getElementById("newnote"+a).value = "") {
-                alert('Please type something into the box first!');
-            }
-            else {
+            
                 document.getElementById("newnote"+a).blur();
                 var url = "start/addnote";
                 var params = "id="+a+"&newnote="+encodeURIComponent(document.getElementById("newnote"+a).value);
@@ -55,7 +52,7 @@
                         Lungo.Router.article("condition_"+a, "cond_my_notes_"+a);
                     }
                 });
-            }
+            
 
         }
 
