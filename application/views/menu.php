@@ -19,7 +19,7 @@
                 <small>Children list of Clinical Problems</small>
             </li>
 
-            <li data-view-section="my_notes" data-async="start/my_notes" data-icon="tags">
+            <li data-view-section="my_notes" data-icon="tags">
                 <strong>My Notes</strong>
             </li>
 

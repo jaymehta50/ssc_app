@@ -136,14 +136,15 @@ class Problems_model extends CI_Model {
 		return $temp;
 	}
 
-	public function addnote($cond_id, $note, $child, $user)
+
+
+	public function addnote($cond_id, $note, $user)
 	{
 		$data = array(
 			'user' => $user,
 			'condition_id' => $cond_id,
 			'note' => htmlentities(nl2br($note), ENT_QUOTES)
 			);
-		if($child=="1") $data['child'] = "1";
 		$this->db->insert('notes', $data);
 		return $this->db->insert_id();
 	}

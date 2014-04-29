@@ -22,6 +22,7 @@ class Start extends CI_Controller {
 		$this->load->view('child_prob',$data);
 		$this->load->view('general_info',$data);
 		$this->load->view('edit_note',$data);
+		$this->my_notes();
 		$this->load->view('menu',$data);
 		$this->load->view('footer',$data);
 	}
@@ -49,10 +50,10 @@ class Start extends CI_Controller {
 		if($data['my_notes']) $data['condition_names'] = $this->problems_model->getconditionnames($data['my_notes']);
 		$this->load->view('my_notes',$data);
 	}
-	
+
 	public function addnote()
 	{
-		echo $this->problems_model->addnote($this->input->post('id'), $this->input->post('newnote'), $this->input->post('child'), $_SERVER['REMOTE_USER']);
+		echo $this->problems_model->addnote($this->input->post('id'), $this->input->post('newnote'), $_SERVER['REMOTE_USER']);
 	}
 
 	public function removenote()
