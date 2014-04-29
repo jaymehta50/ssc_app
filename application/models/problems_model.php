@@ -102,8 +102,13 @@ class Problems_model extends CI_Model {
 	public function get_cond_name($cond_id)
 	{
 		$this->db->where('id', $cond_id);
-		//$this->db->select('condition');
 		$query = $this->db->get('problem_list_adult');
+		if($query->num_rows()==0)
+		{
+			$this->db->where('id', $cond_id);
+			$query = $this->db->get('problem_list_child');
+		}
+
 		$temp = $query->row_array();
 		return $temp['condition'];
 	}
