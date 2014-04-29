@@ -71,7 +71,7 @@
                     <div class="form">
                         <fieldset>
                             <textarea id="newnote" placeholder="Enter your new note here..."></textarea>
-                            <button class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" onclick="saveNote('<?php echo $condition["id"]; ?>')"></button>
+                            <button class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" onclick="saveNote(<?php echo $condition["id"]; ?>,1)"></button>
                         </fieldset>
                     </div>
                 </li>
@@ -81,7 +81,7 @@
 
         <article id="cond_my_notes" class="list indented scroll">
             <div id="my_notes_<?php echo $condition['id']; ?>">
-                <ul id="list_my_notes_<?php echo $condition['id']; ?>">
+                <ul id="list_my_notes_<?php echo $condition['id']; ?>c">
                 <li>
                     <div style="text-align:center;margin:9px 0 10px 0;"><strong class='text bold'><?php echo $condition['condition']; ?></strong></div>
                     <p>You are currently looking at the condition "<?php echo $condition['condition']."\" (".$condition['clinical_problem'].": ".$condition['problem_subgroup'].")"; ?>.</p><br />
@@ -91,15 +91,15 @@
                         <h2>My Notes</h2>
                     </li>
                     <?php
-                        echo "<li id='no_notes_here_".$condition['id']."'";
+                        echo "<li id='no_notes_here_".$condition['id']."c'";
                         if($notes) echo " style='display:none;'";
                         echo "><p>You do not have any notes on this condition at the moment</p></li>";
                         if($notes)
                         {
                             foreach($notes as $value)
                             {
-                                echo "<li id='cond_mynote_".$value['id']."'><div class='my_note'><p class='text' id='cond_note_text_".$value['id']."'>".html_entity_decode($value['note'])."</p><br />
-                                <a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote(".$value['id'].",1)'></a>
+                                echo "<li id='cond_mynote_".$value['id']."c'><div class='my_note'><p class='text' id='cond_note_text_".$value['id']."c'>".html_entity_decode($value['note'])."</p><br />
+                                <a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote(".$value['id'].",2)'></a>
                                 <a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote(".$value['id'].",1)'></a></div>
                                 </li>";
                             }

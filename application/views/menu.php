@@ -15,7 +15,7 @@
             </li>
 
             <li data-view-section="child_prob" data-icon="list">
-                <strong>Problem List</strong>
+                <strong>Children Problem List</strong>
                 <small>Children list of Clinical Problems</small>
             </li>
 

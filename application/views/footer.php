@@ -34,10 +34,16 @@
             return str.replace(/<br\s*\/?>/mg,"\r\n");
         }
 
-        function saveNote(a) {
+        function saveNote(a,c) {
             document.getElementById("newnote").blur();
             var url = "start/addnote";
             var params = "id="+a+"&newnote="+encodeURIComponent(document.getElementById("newnote").value);
+            var d = "";
+            if(c==1)
+            {
+                params = "child=1&" + params;
+                d = "c";
+            }
 
             loadXMLDoc(url,params,function(){
                 if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
@@ -51,15 +57,25 @@
             div.innerHTML = "<p>" + document.getElementById("newnote").value.replace(/\r?\n/g, '<br />') + "</p>";
             var list=document.createElement("LI");
             list.appendChild(div);
-            document.getElementById("list_my_notes_"+a).appendChild(list);
-            document.getElementById("no_notes_here_"+a).style.display="none";
+            document.getElementById("list_my_notes_"+a+d).appendChild(list);
+            document.getElementById("no_notes_here_"+a+d).style.display="none";
 
             document.getElementById("newnote").value = "";
-            Lungo.Router.article("adult_condition_"+a, "cond_my_notes");
+            if(c==1)
+            {
+                Lungo.Router.article("child_condition_"+a, "cond_my_notes");
+            }
+            else
+            {
+                Lungo.Router.article("adult_condition_"+a, "cond_my_notes");
+            }
         }
 
         function editNote(a,o) {
-            if (o==1) {
+            if (o==2) {
+                document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a+"c").innerHTML);
+            }
+            else if (o==1) {
                 document.getElementById("edit_note_textarea").value = br2nl(document.getElementById("cond_note_text_"+a).innerHTML);
             }
             else {
@@ -78,6 +94,9 @@
                 if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
                 {
                     //alert(ajaxdocthing.responseText);
+                    if (document.contains(document.getElementById("cond_note_text_"+a+"c"))) {
+                        document.getElementById("cond_note_text_"+a+"c").innerHTML = ajaxdocthing.responseText;
+                    }
 
                     if (document.contains(document.getElementById("cond_note_text_"+a))) {
                         document.getElementById("cond_note_text_"+a).innerHTML = ajaxdocthing.responseText;

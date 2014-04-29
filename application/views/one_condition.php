@@ -192,7 +192,7 @@
                     <div class="form">
                         <fieldset>
                             <textarea id="newnote" placeholder="Enter your new note here..."></textarea>
-                            <button class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" onclick="saveNote('<?php echo $condition["id"]; ?>')"></button>
+                            <button class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" onclick="saveNote(<?php echo $condition["id"]; ?>,0)"></button>
                         </fieldset>
                     </div>
                 </li>
