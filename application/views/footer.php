@@ -37,21 +37,21 @@
         function saveNote(a) {
             document.getElementById("newnote"+a).blur();
             var url = "start/addnote";
-            var params = "id="+a+"&newnote="+encodeURIComponent(document.getElementById("newnote").value);
+            var params = "id="+a+"&newnote="+encodeURIComponent(document.getElementById("newnote"+a).value);
 
             loadXMLDoc(url,params,function(){
                 if (ajaxdocthing.readyState==4 && ajaxdocthing.status==200)
                 {
                     var newid = ajaxdocthing.responseText;
                     var ul = document.getElementById("list_my_notes_"+a);
-                    var newhtml = "<li id='cond_mynote_"+newid+"'><div class='my_note'><p class='text' id='cond_note_text_"+newid+"'>"+document.getElementById("newnote").value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+",1)'></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+",1)'></a></div></li>";
+                    var newhtml = "<li id='cond_mynote_"+newid+"'><div class='my_note'><p class='text' id='cond_note_text_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+",1)'></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+",1)'></a></div></li>";
                     ul.innerHTML = ul.innerHTML + newhtml;
                     document.getElementById("no_notes_here_"+a).style.display="none";
                     Lungo.Router.article("condition_"+a, "cond_my_notes_"+a);
 
                     document.getElementById("mynotes_li_nonotes").style.display="none";
                     var ul2 = document.getElementById("mynotes_ul");
-                    var newhtml2 = "<li id='me_mynote_"+newid+"'><div class='my_note'><p class='text' id='my_note_"+newid+"'>"+document.getElementById("newnote").value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+",2)'></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+",2)'></a></div></li>";
+                    var newhtml2 = "<li id='me_mynote_"+newid+"'><div class='my_note'><p class='text' id='my_note_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+",2)'></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+",2)'></a></div></li>";
                     ul2.innerHTML = ul2.innerHTML + newhtml2;
                 }
             });
