@@ -9,7 +9,9 @@
         <article id="my_notes" class="list scroll intendeds active">
             <ul id='mynotes_ul'><li class='anchor contrast'></li>
             <?php
-                if(!$my_notes) echo "<li id='mynotes_li_nonotes'><h2>You have not created any notes yet!</h2></li>";
+                echo "<li id='mynotes_li_nonotes'";
+                if($my_notes) echo " style='display:none;'";
+                echo "><h2>You have not created any notes yet!</h2></li>";
                 else
                 {
                     $prev_id = "";
