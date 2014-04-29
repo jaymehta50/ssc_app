@@ -46,6 +46,7 @@ table.course > tbody > tr > th {padding-top:15px;font-size:18px;}
 td.red {background-color:#FF4747;}
 td.amber {background-color:#FFB833;}
 td.green {background-color:#33FF33;}
+td.blue {background-color:#00afe3;}
 
 .list li{list-style-type:none;position:relative;text-align:-webkit-match-parent;line-height:inherit;}
 .list li:not(.big){padding:.8em}
