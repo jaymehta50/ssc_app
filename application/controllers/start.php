@@ -31,6 +31,13 @@ class Start extends CI_Controller {
 		$this->load->view('footer',$data);
 	}
 
+	public function testing()
+	{
+		echo "<pre>";
+		print_r($this->problems_model->getchildprobnames());
+		echo "</pre>";
+	}
+
 	public function adult_prob($problem)
 	{
 		$data['av_char_width'] = $this->av_char_width;

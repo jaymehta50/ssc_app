@@ -99,11 +99,11 @@ class Problems_model extends CI_Model {
 		return $temp;
 	}
 
-	public function get_cond_name($cond_id)
+	public function get_cond_name($cond_id, $child = FALSE)
 	{
 		$this->db->where('id', $cond_id);
 		$query = $this->db->get('problem_list_adult');
-		if($query->num_rows()==0)
+		if($query->num_rows()==0 OR $child)
 		{
 			$this->db->where('id', $cond_id);
 			$query = $this->db->get('problem_list_child');
