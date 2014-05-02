@@ -218,6 +218,7 @@
                     <div class="form">
                         <fieldset>
                             <textarea id="newnote<?php echo $condition['id']; ?>" placeholder="Enter your new note here..."></textarea>
+                            <input type="hidden" name="condition_name_from_id<?php echo $condition["id"]; ?>" id="condition_name_from_id<?php echo $condition["id"]; ?>" value="<?=$condition['condition'];?>" />
                             <button class="anchor accept margin-bottom" data-icon="ok" data-label="Save Note" onclick="saveNote(<?php echo $condition["id"]; ?>)"></button>
                         </fieldset>
                     </div>

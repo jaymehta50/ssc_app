@@ -45,11 +45,17 @@
                         ul.innerHTML = ul.innerHTML + newhtml;
                         document.getElementById("no_notes_here_"+a).style.display="none";
 
-                        document.getElementById("mynotes_li_nonotes").style.display="none";
-                        var ul2 = document.getElementById("mynotes_ul");
-                        var newhtml2 = "<li id='me_mynote_"+newid+"'><div class='my_note'><p class='text' id='my_note_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+")'><span class='icon pencil'></span><abbr>Edit</abbr></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+")'><span class='icon remove'></span><abbr>Delete</abbr></a></div></li>";
-                        ul2.innerHTML = ul2.innerHTML + newhtml2;
+                        if (document.contains(document.getElementById("mynotes_conddiv_"+a))) {
+                            document.getElementById("mynotes_conddiv_"+a).innerHTML += newhtml2;
+                        }
+                        else {
+                            document.getElementById("mynotes_li_nonotes").style.display="none";
+                            var newhtml3 = "<div id='mynotes_conddiv_"+a+"'><a href='#' data-view-section='condition_"+a+"' data-async='start/condition/"+a+"''><li class='selectable arrow'><strong class='text bold'>"+document.getElementById("condition_name_from_id"+a).value+"</strong></li></a><li id='me_mynote_"+newid+"'><div class='my_note'><p class='text' id='my_note_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+")'><span class='icon pencil'></span><abbr>Edit</abbr></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+")'><span class='icon remove'></span><abbr>Delete</abbr></a></div></li></div>";
+                            var ul2 = document.getElementById("mynotes_ul");
+                            ul2.innerHTML = ul2.innerHTML + newhtml3;
+                        }
                         Lungo.Router.article("condition_"+a, "cond_my_notes_"+a);
+                        
                     }
                 });
             
