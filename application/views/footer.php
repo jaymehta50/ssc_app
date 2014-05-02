@@ -46,6 +46,7 @@
                         document.getElementById("no_notes_here_"+a).style.display="none";
 
                         if (document.contains(document.getElementById("mynotes_conddiv_"+a))) {
+                            var newhtml2 = "<li id='me_mynote_"+newid+"'><div class='my_note'><p class='text' id='my_note_"+newid+"'>"+document.getElementById("newnote"+a).value.replace(/\r?\n/g, '<br />')+"</p><br /><a href='#' class='button small' data-label='Edit' data-icon='pencil' onclick='editNote("+newid+")'><span class='icon pencil'></span><abbr>Edit</abbr></a><a href='#' class='button cancel on-right small' data-label='Delete' data-icon='remove' onclick='removeNote("+newid+")'><span class='icon remove'></span><abbr>Delete</abbr></a></div></li>";
                             document.getElementById("mynotes_conddiv_"+a).innerHTML += newhtml2;
                         }
                         else {
