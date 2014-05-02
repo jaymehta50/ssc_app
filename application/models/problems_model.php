@@ -7,6 +7,21 @@ class Problems_model extends CI_Model {
 		$this->load->database();
 	}
 
+	public function track_user($user)
+	{
+		$this->db->where('crsid', $user);
+		$query = $this->db->get('prob_user');
+		if($query->num_rows()==0)
+		{
+			$data = array('crsid' => $user, 'last_login' => date("Y-m-d H:i:s"));
+			$this->db->insert('prob_user', $data);
+		}
+		else {
+			$this->db->where('crsid', $user);
+			$this->db->update('prob_user', array("last_login" => date("Y-m-d H:i:s"));
+		}
+	}
+
 	public function getprobnames($child = FALSE)
 	{
 		if($child) $this->db->where('child', 1);

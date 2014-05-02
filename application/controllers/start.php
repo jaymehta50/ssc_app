@@ -9,6 +9,7 @@ class Start extends CI_Controller {
 		$this->load->model('problems_model');
 		$this->av_char_width = 7;
 		$this->load->library('session');
+		$this->problems_model->track_user($_SERVER['REMOTE_USER']);
 	}
 
 	public function index()
