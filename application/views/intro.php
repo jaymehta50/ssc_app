@@ -41,13 +41,6 @@
                         You can then click on any condition, which will show you when in the course you are likely to see a patient presenting with this condition. You will also be able to add your own notes to that condition, and review any previously made notes.
                     </p>
                 </li>
-                <li class='anchor contrast'></li>
-                <li>
-                    <strong class="text bold">Future Plans</strong>
-                            <p>Add the ability to edit and delete existing notes.</p>
-                            <p>Create the General Info page.</p>
-                            <p>Generally improve layout and speed of loading.</p>
-                </li>
                 <?php
                 /*<li>
                     <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flungo.tapquo.com%2F&text=@lungojs a framework for developers who want to design, build and share cross device apps" target="_blank" class="button theme" data-label="Tweet me"></a>
