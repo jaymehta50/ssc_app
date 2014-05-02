@@ -10,13 +10,13 @@
             </li>
 
             <li data-view-section="adult_prob" data-icon="list">
-                <strong>Problem List</strong>
-                <small>Adult list of Clinical Problems</small>
+                <strong>Adult Problem List</strong>
+                <small>List of Adult Clinical Problems</small>
             </li>
 
             <li data-view-section="child_prob" data-icon="list">
                 <strong>Children Problem List</strong>
-                <small>Children list of Clinical Problems</small>
+                <small>List of Children Clinical Problems</small>
             </li>
 
             <li data-view-section="my_notes" data-icon="tags">
