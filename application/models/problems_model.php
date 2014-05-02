@@ -18,7 +18,7 @@ class Problems_model extends CI_Model {
 		}
 		else {
 			$this->db->where('crsid', $user);
-			$this->db->update('prob_user', array("last_login" => date("Y-m-d H:i:s"));
+			$this->db->update('prob_user', array("last_login" => date("Y-m-d H:i:s")));
 		}
 	}
 
