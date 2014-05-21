@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://jkm50.user.srcf.net/ssc_app/';
+$config['base_url']	= 'http://jkm50.user.srcf.net/ssc/ssc_app/';
 
 /*
 |--------------------------------------------------------------------------
